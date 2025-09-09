@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="site_title_awards">Достижения - Беларусь 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../god-blagoustroistva2025-04.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="awards.css">
+    <style>
+    
+    .awards-hero-banner {
+        background: linear-gradient(180deg, #00A450 0%, #D92F21 50%, #00A450 100%);
+        position: relative;
+        padding: 6rem 0 4rem 0;
+        overflow: hidden;
+        margin-bottom: 0;
+    }
+    
+    .banner-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        background: linear-gradient(180deg, transparent 0%, transparent 70%, var(--background-light) 100%);
+    }
+    
+    .banner-decoration {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.1);
+        animation: float 6s ease-in-out infinite;
+    }
+    
+    .banner-decoration-1 {
+        width: 200px;
+        height: 200px;
+        top: 10%;
+        right: 10%;
+        animation-delay: 0s;
+    }
+    
+    .banner-decoration-2 {
+        width: 150px;
+        height: 150px;
+        bottom: 20%;
+        left: 5%;
+        animation-delay: 2s;
+    }
+    
+    .banner-decoration-3 {
+        width: 100px;
+        height: 100px;
+        top: 60%;
+        right: 30%;
+        animation-delay: 4s;
+        background: rgba(255,255,255,0.05);
+    }
+    
+    @keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(10deg); }
+    }
+    
+    .hero-content {
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .hero-icon {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        
+    }
+    
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0px) scale(1); }
+        50% { transform: translateY(-10px) scale(1.1); }
+    }
+    
+    .hero-title {
+        font-size: 3.5rem;
+        font-weight: 900;
+        color: white;
+        margin-bottom: 1rem;
+        text-shadow: 
+            0 4px 8px rgba(0,0,0,0.4),
+            0 2px 4px rgba(0,0,0,0.6);
+        letter-spacing: 1px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.3rem;
+        color: rgba(255,255,255,0.95);
+        margin-bottom: 3rem;
+        font-weight: 500;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .hero-stats {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        flex-wrap: wrap;
+    }
+    
+    .stat-item {
+        text-align: center;
+        color: white;
+        background: rgba(255,255,255,0.1);
+        padding: 1.5rem 2rem;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.2);
+        transition: all 0.3s ease;
+    }
+    
+    .stat-item:hover {
+        background: rgba(255,255,255,0.15);
+        transform: translateY(-3px);
+    }
+    
+    .stat-number {
+        display: block;
+        font-size: 2.8rem;
+        font-weight: 900;
+        margin-bottom: 0.5rem;
+        text-shadow: 
+            0 3px 6px rgba(0,0,0,0.4),
+            0 1px 3px rgba(0,0,0,0.6);
+        color: white;
+    }
+    
+    .stat-label {
+        font-size: 1rem;
+        opacity: 1;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 700;
+        color: rgba(255,255,255,0.95);
+        text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+    
+    
+    .awards-main-content {
+        background: linear-gradient(180deg, 
+            rgba(0,164,80,0.03) 0%, 
+            rgba(255,255,255,0.8) 20%, 
+            rgba(248,255,248,0.6) 50%, 
+            rgba(217,47,33,0.03) 100%);
+        min-height: 100vh;
+        position: relative;
+    }
+    
+    .awards-main-content::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100px;
+        background: linear-gradient(180deg, 
+            rgba(0,164,80,0.1) 0%, 
+            transparent 100%);
+        pointer-events: none;
+    }
+    
+    [data-theme="dark"] .awards-main-content {
+        background: linear-gradient(180deg, 
+            rgba(0,164,80,0.08) 0%, 
+            var(--bg-primary) 20%, 
+            var(--bg-secondary) 50%, 
+            rgba(217,47,33,0.05) 100%);
+    }
+    
+    [data-theme="dark"] .awards-main-content::before {
+        background: linear-gradient(180deg, 
+            rgba(0,164,80,0.15) 0%, 
+            transparent 100%);
+    }
+    
+    
+    @media (max-width: 768px) {
+        .awards-hero-banner {
+            padding: 4rem 0 3rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-title {
+            font-size: 2.5rem;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.1rem;
+        }
+        
+        .hero-stats {
+            gap: 2rem;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+        }
+        
+        .stat-item {
+            padding: 1rem 1.5rem;
+        }
+    }
+    
+    
+    .award-section.creative {
+        background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,255,248,0.95) 100%);
+        border-radius: 25px;
+        box-shadow: 
+            0 15px 35px rgba(0,164,80,0.15),
+            0 5px 15px rgba(217,47,33,0.1),
+            0 0 0 1px rgba(0,164,80,0.1);
+        padding: 2.5rem 2rem;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 2px solid transparent;
+        background-clip: padding-box;
+    }
+    
+    .award-section.creative::after {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(45deg, #00A450, #D92F21, #00A450);
+        background-size: 200% 200%;
+        border-radius: 27px;
+        z-index: -1;
+        animation: shimmer-border 4s ease-in-out infinite;
+    }
+    
+    @keyframes shimmer-border {
+        0%, 100% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+    }
+    
+    .award-section.creative::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(0,164,80,0.1), transparent);
+        transition: left 0.5s ease;
+    }
+    
+    .award-section.creative:hover::before {
+        left: 100%;
+    }
+    
+    .award-section.creative:hover {
+        transform: translateY(-12px) scale(1.03);
+        box-shadow: 
+            0 25px 60px rgba(0,164,80,0.25),
+            0 10px 25px rgba(217,47,33,0.15),
+            0 0 0 2px rgba(0,164,80,0.3);
+    }
+    
+    .award-section.creative:hover::after {
+        animation-duration: 2s;
+    }
+    
+    .award-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        display: block;
+        animation: pulse 3s ease-in-out infinite;
+    }
+    
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+    }
+    
+    .award-section.creative h3 {
+        color: #00A450;
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        position: relative;
+    }
+    
+    .award-section.creative h3::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #00A450, #D92F21);
+        border-radius: 2px;
+        transition: width 0.5s ease;
+    }
+    
+    .award-section.creative:hover h3::after {
+        width: 100%;
+    }
+    
+    .award-section.creative p {
+        color: #333;
+        line-height: 1.6;
+        font-size: 1rem;
+    }
+    
+    .award-img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 18px;
+        box-shadow: 
+            0 10px 30px rgba(0,164,80,0.2),
+            0 4px 12px rgba(217,47,33,0.1);
+        border: 3px solid rgba(0,164,80,0.15);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+    }
+    
+    .award-img::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, rgba(0,164,80,0.1), rgba(217,47,33,0.1));
+        border-radius: 15px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .award-section.creative:hover .award-img {
+        transform: scale(1.08) rotate(1deg);
+        box-shadow: 
+            0 20px 45px rgba(0,164,80,0.3),
+            0 8px 20px rgba(217,47,33,0.2);
+        border-color: rgba(217,47,33,0.4);
+    }
+    
+    .award-section.creative:hover .award-img::before {
+        opacity: 1;
+    }
+    
+    
+    [data-theme="dark"] .awards-hero-banner {
+        background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-red) 100%);
+    }
+    
+    [data-theme="dark"] .hero-title {
+        color: white;
+        text-shadow: 
+            0 4px 8px rgba(0,0,0,0.6),
+            0 2px 4px rgba(0,0,0,0.8);
+    }
+    
+    [data-theme="dark"] .hero-subtitle {
+        color: rgba(255,255,255,0.95);
+        text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    }
+    
+    [data-theme="dark"] .stat-item {
+        color: white;
+        background: rgba(255,255,255,0.08);
+        border-color: rgba(255,255,255,0.15);
+    }
+    
+    [data-theme="dark"] .stat-item:hover {
+        background: rgba(255,255,255,0.12);
+    }
+    
+    [data-theme="dark"] .stat-number {
+        color: white;
+        text-shadow: 
+            0 3px 6px rgba(0,0,0,0.5),
+            0 1px 3px rgba(0,0,0,0.7);
+    }
+    
+    [data-theme="dark"] .stat-label {
+        color: rgba(255,255,255,0.95);
+        text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+    }
+    
+    [data-theme="dark"] .award-section.creative {
+        background: linear-gradient(135deg, rgba(30,30,30,0.95) 0%, rgba(20,40,20,0.95) 100%);
+        box-shadow: 
+            0 15px 35px rgba(0,164,80,0.2),
+            0 5px 15px rgba(217,47,33,0.15),
+            0 0 0 1px rgba(0,164,80,0.2);
+    }
+    
+    [data-theme="dark"] .award-section.creative::after {
+        background: linear-gradient(45deg, var(--primary-green), var(--primary-red), var(--primary-green));
+        background-size: 200% 200%;
+    }
+    
+    [data-theme="dark"] .award-section.creative h3 {
+        color: var(--primary-green);
+    }
+    
+    [data-theme="dark"] .award-section.creative p {
+        color: var(--text-light);
+    }
+    
+    [data-theme="dark"] .award-img {
+        border-color: rgba(0,164,80,0.4);
+        box-shadow: 
+            0 10px 30px rgba(0,164,80,0.25),
+            0 4px 12px rgba(217,47,33,0.15);
+    }
+    
+    [data-theme="dark"] .award-section.creative:hover .award-img {
+        border-color: rgba(217,47,33,0.6);
+        box-shadow: 
+            0 20px 45px rgba(0,164,80,0.35),
+            0 8px 20px rgba(217,47,33,0.25);
+    }
+    
+    
+    .awards-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 36px;
+      justify-content: center;
+      margin: 2.5rem 0 2rem 0;
+      min-height: 120px;
+      padding: 0 1vw;
+    }
+    .award-card {
+      background: #f6f8fa;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(42,75,124,0.08);
+      padding: 2.2em 2em 1.2em 2em;
+      min-width: 220px;
+      max-width: 320px;
+      text-align: center;
+      color: #2a4b7c;
+      font-size: 1.08em;
+      font-weight: 500;
+      transition: box-shadow 0.18s, transform 0.18s;
+      margin-bottom: 1.2em;
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+    }
+    
+    
+    [data-theme="dark"] .award-card {
+      background: var(--card-bg);
+      color: var(--text-light);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+    [data-theme="dark"] .award-card:hover {
+      box-shadow: 0 6px 24px rgba(0,0,0,0.4);
+    }
+    [data-theme="dark"] .award-card.expanded {
+      background: var(--bg-secondary);
+      color: var(--text-light);
+      box-shadow: 0 12px 48px rgba(0,0,0,0.4);
+    }
+    [data-theme="dark"] .award-card .close-btn {
+      background: var(--bg-tertiary);
+      color: var(--text-light);
+    }
+    [data-theme="dark"] .award-card .close-btn:hover {
+      background: var(--border-color);
+    }
+    [data-theme="dark"] .award-overlay {
+      background: rgba(0,0,0,0.6);
+    }
+    .award-card:hover {
+      box-shadow: 0 6px 24px rgba(42,75,124,0.16);
+      transform: translateY(-4px) scale(1.03);
+    }
+    .award-card.expanded {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1.04);
+      width: 92vw;
+      max-width: 600px;
+      height: auto;
+      min-height: 320px;
+      z-index: 1002;
+      box-shadow: 0 12px 48px rgba(42,75,124,0.22);
+      background: #fff;
+      padding: 2.5em 2.2em 2.2em 2.2em;
+      text-align: left;
+      font-size: 1.13em;
+      cursor: default;
+      transition: box-shadow 0.3s, transform 0.3s, width 0.3s, max-width 0.3s, padding 0.3s;
+    }
+    .award-card.expanded .close-btn {
+      display: block;
+    }
+    .award-card .close-btn {
+      display: none;
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: #e2e6f3;
+      border: none;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      font-size: 1.3em;
+      color: #2a4b7c;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(42,75,124,0.10);
+      transition: background 0.18s;
+      z-index: 1003;
+    }
+    .award-card .close-btn:hover {
+      background: #d0d8ee;
+    }
+    .award-overlay {
+      display: none;
+      position: fixed;
+      left: 0; top: 0; width: 100vw; height: 100vh;
+      background: rgba(30,40,60,0.45);
+      z-index: 1001;
+      transition: opacity 0.25s;
+    }
+    .award-overlay.active {
+      display: block;
+    }
+    @media (max-width: 700px) {
+      .award-card.expanded {
+        width: 98vw;
+        max-width: 99vw;
+        padding: 1.2em 0.7em 1em 0.7em;
+        font-size: 1em;
+      }
+    }
+    .awards-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+      margin: 2.5rem 0 2rem 0;
+      min-height: 120px;
+    }
+    .award-section.creative {
+      background: linear-gradient(120deg, #e0e7ff 0%, #f6f8fa 100%);
+      border-radius: 24px;
+      box-shadow: 0 8px 32px rgba(42,75,124,0.13);
+      padding: 2.2em 2em 1.7em 2em;
+      position: relative;
+      overflow: hidden;
+      transition: box-shadow 0.25s, transform 0.25s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 0;
+      min-width: 320px;
+      max-width: 520px;
+      width: 100%;
+      opacity: 0;
+      transform: translateY(40px);
+      border: 2.5px solid #b3c6f7;
+      z-index: 1;
+    }
+    .award-section.creative::before {
+      content: '';
+      position: absolute;
+      top: -60px; left: -60px;
+      width: 120px; height: 120px;
+      background: radial-gradient(circle, #b3c6f7 0%, transparent 70%);
+      opacity: 0.18;
+      z-index: 0;
+    }
+    .award-section.creative::after {
+      content: '';
+      position: absolute;
+      bottom: -50px; right: -50px;
+      width: 100px; height: 100px;
+      background: radial-gradient(circle, #4e7cbf 0%, transparent 70%);
+      opacity: 0.13;
+      z-index: 0;
+    }
+    .award-section.creative.award-visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.7s, transform 0.7s;
+    }
+    .award-section.creative:hover {
+      box-shadow: 0 16px 48px rgba(42,75,124,0.22);
+      transform: translateY(-8px) scale(1.025);
+      border-color: #4e7cbf;
+    }
+    
+    
+    [data-theme="dark"] .award-section.creative {
+      background: linear-gradient(120deg, #2c2c3a 0%, var(--card-bg) 100%);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      border: 2.5px solid var(--border-color);
+      color: #e2e8f0;
+    }
+    [data-theme="dark"] .award-section.creative h3 {
+      color: #f1f5f9;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+    [data-theme="dark"] .award-section.creative p {
+      color: #cbd5e1;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    }
+    [data-theme="dark"] .award-section.creative::before {
+      background: radial-gradient(circle, var(--border-color) 0%, transparent 70%);
+    }
+    [data-theme="dark"] .award-section.creative::after {
+      background: radial-gradient(circle, #4e7cbf 0%, transparent 70%);
+    }
+    [data-theme="dark"] .award-section.creative:hover {
+      box-shadow: 0 16px 48px rgba(0,0,0,0.5);
+      border-color: #4e7cbf;
+    }
+    [data-theme="dark"] .award-section.creative:hover h3 {
+      color: #ffffff;
+    }
+    [data-theme="dark"] .award-section.creative:hover p {
+      color: #e2e8f0;
+    }
+    .award-img-wrap {
+      position: relative;
+      margin-bottom: 1.2em;
+      width: 100%;
+      max-width: 340px;
+      z-index: 1;
+    }
+    .award-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(42,75,124,0.10);
+      background: #eaeef6;
+      display: block;
+      border: 1.5px solid #e0e7ff;
+    }
+    .award-icon {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      font-size: 2.2em;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(42,75,124,0.10);
+      padding: 0.18em 0.28em;
+      z-index: 2;
+      border: 1.5px solid #b3c6f7;
+      
+    }
+    .award-section h3 {
+      margin: 0.7em 0 0.4em 0;
+      font-size: 1.35em;
+      color: #2a4b7c;
+      font-weight: 700;
+      text-align: center;
+      z-index: 1;
+    }
+    .award-section p {
+      color: #333;
+      font-size: 1.08em;
+      margin: 0 0 0.2em 0;
+      text-align: center;
+      z-index: 1;
+    }
+    @media (max-width: 1100px) {
+      .awards-list {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .award-section.creative {
+        min-width: 90vw;
+        max-width: 98vw;
+        font-size: 1em;
+        padding: 1.2em 0.7em 1em 0.7em;
+      }
+      .award-img-wrap, .award-img {
+        max-width: 98vw;
+        height: 38vw;
+        min-height: 120px;
+      }
+    }
+    .awards-intro-highlight {
+      background: linear-gradient(90deg, #e0ffe7 0%, #e6f0ff 100%);
+      border-left: 6px solid #00A450;
+      border-radius: 10px;
+      box-shadow: 0 2px 16px rgba(0,164,80,0.10);
+      padding: 1.2em 1.5em;
+      margin: 1.5em 0 2.5em 0;
+      font-size: 1.18em;
+      font-weight: 500;
+      color: #1a3a2a;
+      letter-spacing: 0.01em;
+      animation: fadeInAwardsIntro 1.1s;
+      position: relative;
+    }
+    .awards-intro-highlight::before {
+      content: "✨";
+      position: absolute;
+      left: -2.2em;
+      top: 0.2em;
+      font-size: 1.5em;
+      opacity: 0.7;
+    }
+    @keyframes fadeInAwardsIntro {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .awards-intro-highlight strong {
+      color: #00A450;
+      font-weight: 700;
+      background: #e0ffe7;
+      border-radius: 4px;
+      padding: 0 0.2em;
+    }
+    </style>
+</head>
+<body>
+    <header class="header-full-nav header-adaptive">
+      <div class="container">
+                <div class="logo" data-lang-key="logo_text">Беларусь 2025: Благоустройство</div>
+            <label class="burger" for="burger">
+                <input type="checkbox" id="burger" />
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html" data-lang-key="nav_main">Главная</a></li>
+                    <li><a href="about.html" data-lang-key="nav_about">О программе</a></li>
+                    <li><a href="projects.html" data-lang-key="nav_projects">Проекты</a></li>
+                    <li><a href="news.html" class="active" data-lang-key="nav_news">Новости</a></li>
+                    <li><a href="gallery.html" data-lang-key="nav_gallery">Галерея</a></li>
+                    <li><a href="awards.html" data-lang-key="nav_awards">Достижения</a></li>
+                   <li><a href="liberation80.html" data-lang-key="nav_liberation80">80 лет освобождения</a></li>
+                </ul>
+            </nav>
+            <div class="lang-switcher">
+                <button id="lang-ru" class="lang-btn active" data-lang="ru">RU</button>
+                <button id="lang-by" class="lang-btn" data-lang="by">BY</button>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">
+                    <span class="theme-toggle-slider"></span>
+                </button>
+                <button id="mobile-theme-btn" class="mobile-theme-btn" aria-label="Переключить тему">☀️</button>
+            </div>
+        <div class="auth-buttons">
+        </div>
+    </div>
+    </header>
+    <main>
+        <div class="awards-hero-banner">
+            <div class="banner-background">
+                <div class="banner-decoration banner-decoration-1"></div>
+                <div class="banner-decoration banner-decoration-2"></div>
+                <div class="banner-decoration banner-decoration-3"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-icon">🏆</div>
+                    <h1 class="hero-title" data-lang-key="awards_main_title">Достижения и награды</h1>
+                    <p class="hero-subtitle" data-lang-key="awards_hero_subtitle">Гордимся успехами Беларуси в 2025 году</p>
+                    <div class="hero-stats">
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="awards-main-content">
+        <div class="container page-content animate-on-scroll">
+            <div class="awards-list">
+                <div class="award-section creative">
+                    <span class="award-icon">🥔</span>
+                    <div class="award-img-wrap">
+                        <img src="img-awards/awards-1.png" alt="Экспорт картофеля" class="award-img">
+                    </div>
+                    <h3 data-lang-key="award_1_title">Крупнейший экспорт картофеля в Россию</h3>
+                    <p data-lang-key="award_1_desc">В 2025 году Беларусь стала крупнейшим поставщиком картофеля в Россию, экспорт увеличился на 60% и достиг 170 тыс. тонн.</p>
+                </div>
+                <div class="award-section creative">
+                    <span class="award-icon">🎯</span>
+                    <div class="award-img-wrap">
+                        <img src="img-awards/awards-2.jpg" alt="Стрелок Ливанцов - первая медаль олимпийского фестиваля в Скопье" class="award-img">
+                    </div>
+                    <h3 data-lang-key="award_2_title">Стрелок Ливанцов принес Беларуси первую медаль олимпийского фестиваля в Скопье</h3>
+                    <p data-lang-key="award_2_desc">Белорусский спортсмен Ливанцов завоевал первую медаль для Беларуси на Европейском юношеском олимпийском фестивале 2025 года в Скопье.</p>
+                </div>
+                <div class="award-section creative">
+                    <span class="award-icon">🚣‍♂️</span>
+                    <div class="award-img-wrap">
+                        <img src="img-awards/awards-3.jpg" alt="Гребля" class="award-img">
+                    </div>
+                    <h3 data-lang-key="award_3_title">Медали по гребле на международных соревнованиях</h3>
+                    <p data-lang-key="award_3_desc">Белорусские спортсмены в 2025 году вновь завоевали медали на международных соревнованиях по гребле.</p>
+                </div>
+                <div class="award-section creative">
+                    <span class="award-icon">💻</span>
+                    <div class="award-img-wrap">
+                        <img src="img-awards/awards-4.jpg" alt="Кибербезопасность" class="award-img">
+                    </div>
+                    <h3 data-lang-key="award_4_title">Участие в международных кибероперациях</h3>
+                    <p data-lang-key="award_4_desc">Белорусские IT-специалисты были отмечены за участие в международных кибероперациях по безопасности данных.</p>
+                </div>
+                <div class="award-section creative">
+                    <span class="award-icon">🏆</span>
+                    <div class="award-img-wrap">
+                        <img src="img-awards/awards-5.jpg" alt="Олимпиады" class="award-img">
+                    </div>
+                    <h3 data-lang-key="award_5_title">Победы на международных олимпиадах</h3>
+                    <p data-lang-key="award_5_desc">В 2025 году белорусские школьники завоевали медали на международных олимпиадах по математике и физике.</p>
+                </div>
+                <div class="award-section creative">
+                    <span class="award-icon">🌾</span>
+                    <div class="award-img-wrap">
+                        <img src="img-awards/awards-6.png" alt="Аграрии" class="award-img">
+                    </div>
+                    <h3 data-lang-key="award_6_title">Рекордный урожай зерновых</h3>
+                    <p data-lang-key="award_6_desc">В 2025 году Беларусь собрала рекордный урожай зерновых культур, укрепив продовольственную безопасность страны.</p>
+                </div>
+                <div class="award-section creative">
+                    <span class="award-icon">🥕</span>
+                    <div class="award-img-wrap">
+                        <img src="img-awards/awards-7.jpg" alt="Технологии хранения" class="award-img">
+                    </div>
+                    <h3 data-lang-key="award_7_title">Инновации в хранении овощей</h3>
+                    <p data-lang-key="award_7_desc">Белорусские учёные внедрили новые технологии хранения овощей, что позволило снизить потери урожая в 2025 году.</p>
+                </div>
+                <div class="award-section creative">
+                    <span class="award-icon">🎭</span>
+                    <div class="award-img-wrap">
+                        <img src="img-awards/awards-8.jpg" alt="Фестиваль искусств" class="award-img">
+                    </div>
+                    <h3 data-lang-key="award_8_title">Международный фестиваль искусств в Витебске</h3>
+                    <p data-lang-key="award_8_desc">В 2025 году в Витебске прошёл юбилейный международный фестиваль искусств с участием десятков стран.</p>
+                </div>
+                <div class="award-section creative">
+                    <span class="award-icon">🛰️</span>
+                    <div class="award-img-wrap">
+                        <img src="img-awards/awards-9.jpg" alt="Запуск белорусского спутника 2025" class="award-img">
+                    </div>
+                    <h3 data-lang-key="award_9_title">Запуск белорусского спутника нового поколения</h3>
+                    <p data-lang-key="award_9_desc">В 2025 году Беларусь успешно провела запуск собственного малогабаритного спутника дистанционного зондирования Земли. Этот проект стал важным шагом для науки, экологии и мониторинга чрезвычайных ситуаций.</p>
+                </div>
+                <div class="award-section creative">
+                    <span class="award-icon">🌳</span>
+                    <div class="award-img-wrap">
+                        <img src="img-awards/awards-10.jpg" alt="Беловежская пуща" class="award-img">
+                    </div>
+                    <h3 data-lang-key="award_10_title">Экологические проекты в Беловежской пуще</h3>
+                    <p data-lang-key="award_10_desc">В 2025 году реализованы новые проекты по сохранению природы Беловежской пущи.</p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="news-list-container" style="display:none"></div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="ornament-bar"></div>
+            <p data-lang-key="footer_copyright">Беларусь 2025: Благоустройство.</p>
+            <p data-lang-key="footer_developed_by">Разработано с ❤️ для Беларуси</p>
+            <div class="ornament-bar"></div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/auth-simple.js"></script>
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/header.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+  createAuthModals();
+  
+  setTimeout(() => {
+    updateAuthUIWithRedirect();
+  }, 100);
+  
+  const sections = document.querySelectorAll('.award-section.creative');
+  const observer = new window.IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('award-visible');
+      }
+    });
+  }, { threshold: 0.2 });
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+});
+</script>
+</body>
+</html> 
+
+

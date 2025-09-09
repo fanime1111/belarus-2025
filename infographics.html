@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="site_title_infographics">Беларусь 2025: Инфографика</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../god-blagoustroistva2025-04.ico" type="image/x-icon">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .charts-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 20px 0;
+            width: 100%;
+        }
+        
+        .chart-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        .chart-card-wide {
+            grid-column: 1 / -1;
+            height: 500px;
+        }
+        
+        .chart-card-half {
+            height: 450px;
+        }
+        
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: calc(100% - 60px);
+            margin-top: 15px;
+        }
+        
+        .charts-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            width: 100%;
+        }
+        
+        @media (max-width: 992px) {
+            .chart-card-wide,
+            .chart-card-half {
+                height: auto;
+                min-height: 400px;
+            }
+            
+            .charts-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .chart-card {
+                padding: 15px;
+            }
+            
+            .chart-card h2 {
+                font-size: 1.3rem;
+                margin-bottom: 15px;
+            }
+        }
+        
+        .chart-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+        
+        
+        
+        
+        [data-theme="dark"] .chart-card {
+            background: #1e293b;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            color: #e2e8f0;
+        }
+        
+        [data-theme="dark"] .chart-card h2 {
+            color: #f1f5f9;
+        }
+        
+        [data-theme="dark"] .chart-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        }
+        .container h1 {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 2.5rem;
+            color: #2a4b7c;
+        }
+        
+        [data-theme="dark"] .container h1 {
+            color: #f1f5f9;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-full-nav">
+        <div class="container">
+            <div class="logo" data-lang-key="logo_text">Беларусь 2025: Благоустройство</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" data-lang-key="nav_main">Главная</a></li>
+                    <li><a href="about.html" data-lang-key="nav_about">О программе</a></li>
+                    <li><a href="projects.html" data-lang-key="nav_projects">Проекты</a></li>
+                    <li><a href="news.html" data-lang-key="nav_news">Новости</a></li>
+                    <li><a href="gallery.html" data-lang-key="nav_gallery">Галерея</a></li>
+                    <li><a href="awards.html" data-lang-key="nav_awards">Достижения</a></li>
+                     <li><a href="liberation80.html" data-lang-key="nav_liberation80">80 лет освобождения</a></li> 
+                </ul>
+            </nav>
+            <div class="lang-switcher">
+                <button id="lang-ru" class="lang-btn active" data-lang="ru">RU</button>
+                <button id="lang-by" class="lang-btn" data-lang="by">BY</button>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">
+                    <span class="theme-toggle-slider"></span>
+                </button>
+            </div>
+            <div class="auth-buttons">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 data-lang-key="infographics_title">Аналитика проектов в инфографике</h1>
+            <div class="charts-container">
+                <div class="chart-card chart-card-wide">
+                    <h2 data-lang-key="chart2_title">Инвестиции в благоустройство по годам (млн. BYN)</h2>
+                    <div class="chart-container">
+                        <canvas id="investmentChart"></canvas>
+                    </div>
+                </div>
+                <div class="charts-row">
+                    <div class="chart-card chart-card-half">
+                        <h2 data-lang-key="chart1_title">Распределение проектов по областям</h2>
+                        <div class="chart-container">
+                            <canvas id="projectsByRegionChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-card chart-card-half">
+                        <h2 data-lang-key="chart3_title">Основные направления благоустройства</h2>
+                        <div class="chart-container">
+                            <canvas id="improvementTypesChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="ornament-bar"></div>
+            <p data-lang-key="footer_copyright">Беларусь 2025: Благоустройство.</p>
+            <p data-lang-key="footer_developed_by">Разработано с ❤️ для Беларуси</p>
+            <div class="ornament-bar"></div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/infographics.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+  createAuthModals();
+  
+  setTimeout(() => {
+    updateAuthUIWithRedirect();
+  }, 100);
+  
+  const sections = document.querySelectorAll('.award-section.creative');
+  const observer = new window.IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('award-visible');
+      }
+    });
+  }, { threshold: 0.2 });
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+});
+    </script>
+</body>
+</html>
+
+
+

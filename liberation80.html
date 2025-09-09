@@ -1,0 +1,528 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="site_title_liberation80">80 лет победы - Беларусь 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../god-blagoustroistva2025-04.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/liberation80-photos.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        
+        .liberation-page .header-wrapper {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+        }
+        
+        .liberation-page header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="liberation-page">
+    <div class="header-wrapper">
+        <header class="header-full-nav header-adaptive">
+            <div class="container">
+                                <div class="logo" data-lang-key="logo_text">Беларусь 2025: Благоустройство</div>
+                <label class="burger" for="burger">
+                    <input type="checkbox" id="burger" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <nav id="nav-menu">
+                    <ul>
+                        <li><a href="index.html" data-lang-key="nav_main">Главная</a></li>
+                        <li><a href="about.html" data-lang-key="nav_about">О программе</a></li>
+                        <li><a href="projects.html" data-lang-key="nav_projects">Проекты</a></li>
+                        <li><a href="news.html" data-lang-key="nav_news">Новости</a></li>
+                        <li><a href="gallery.html" data-lang-key="nav_gallery">Галерея</a></li>
+                        <li><a href="awards.html" data-lang-key="nav_awards">Достижения</a></li>
+                        <li><a href="liberation80.html" class="active" data-lang-key="nav_liberation80">80 лет освобождения</a></li>
+                    </ul>
+                </nav>
+                <div class="header-controls">
+                    <div class="lang-switcher">
+                    <button id="lang-ru" class="lang-btn active" data-lang="ru">RU</button>
+                    <button id="lang-by" class="lang-btn" data-lang="by">BY</button>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">
+                        <span class="theme-toggle-slider"></span>
+                    </button>
+                    <button id="mobile-theme-btn" class="mobile-theme-btn" aria-label="Переключить тему">☀️</button>
+                </div>
+                    <div class="auth-buttons">
+                        <button id="login-btn">Вход</button>
+                        <button id="register-btn">Регистрация</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <main>
+        
+        <section class="liberation-hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-medal"></i>
+                    <span>1945 - 2025</span>
+                </div>
+                <h1 class="hero-title" data-lang-key="liberation_main_title">
+                    80 лет Победы
+                </h1>
+                <p class="hero-subtitle" data-lang-key="liberation_intro_text">
+                    80 лет Победы — символ мужества, единства и несгибаемой воли белорусского народа, который прошёл через тяжелейшие испытания Великой Отечественной войны и внёс неоценимый вклад в Победу.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">80</div>
+                        <div class="stat-label">лет Победы</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1945</div>
+                        <div class="stat-label">год Победы</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">9</div>
+                        <div class="stat-label">мая</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            
+            <section class="timeline-section">
+                <h2 class="section-title">
+                    <i class="fas fa-clock"></i>
+                    <span data-lang-key="timeline_section_title">Хронология победы</span>
+                </h2>
+                <div class="interactive-timeline">
+                    <div class="timeline-item" id="timeline-1941" data-year="1941">
+                        <div class="timeline-marker">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date" data-lang-key="timeline_war_start_date">22 июня 1941</div>
+                            <h3 data-lang-key="timeline_war_start_title">Начало войны</h3>
+                            <p data-lang-key="timeline_war_start_desc">Нападение фашистской Германии на СССР. Начало оккупации Беларуси.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" id="timeline-bagration" data-year="1944">
+                        <div class="timeline-marker active">
+                            <i class="fas fa-fist-raised"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date" data-lang-key="timeline_bagration_date">23 июня 1944</div>
+                            <h3 data-lang-key="timeline_bagration_title">Операция «Багратион»</h3>
+                            <p data-lang-key="timeline_bagration_desc">Начало крупнейшей наступательной операции по освобождению Беларуси.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" id="timeline-minsk" data-year="1944">
+                        <div class="timeline-marker">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date" data-lang-key="timeline_minsk_date">3 июля 1944</div>
+                            <h3 data-lang-key="timeline_minsk_title">Освобождение Минска</h3>
+                            <p data-lang-key="timeline_minsk_desc">Столица Беларуси освобождена. День, который стал Днём Независимости.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" id="timeline-victory" data-year="1945">
+                        <div class="timeline-marker">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date" data-lang-key="timeline_victory_date">9 мая 1945</div>
+                            <h3 data-lang-key="timeline_victory_title">День Победы</h3>
+                            <p data-lang-key="timeline_victory_desc">Окончание Великой Отечественной войны. Полная победа над фашизмом.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section class="heroes-section">
+                <h2 class="section-title">
+                    <i class="fas fa-users"></i>
+                    <span data-lang-key="heroes_section_title">Герои освобождения</span>
+                </h2>
+                <div class="heroes-grid">
+                    <div class="hero-card">
+                        <div class="hero-image">
+                            <img src="img-80/war-2.jpg" alt="Советские солдаты">
+                            <div class="hero-overlay-card">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                        </div>
+                        <div class="hero-info">
+                            <h3 data-lang-key="heroes_soviet_troops">Советские войска</h3>
+                            <p data-lang-key="heroes_soviet_troops_desc">Героические солдаты и офицеры, освободившие белорусскую землю от захватчиков.</p>
+                            <div class="hero-stats-mini">
+                                <span><i class="fas fa-users"></i> <span data-lang-key="heroes_participants">Миллионы участников</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-card">
+                        <div class="hero-image">
+                            <img src="img-80/partisan-1.webp" alt="Партизаны">
+                            <div class="hero-overlay-card">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                        </div>
+                        <div class="hero-info">
+                            <h3 data-lang-key="heroes_partisans">Партизаны</h3>
+                            <p data-lang-key="heroes_partisans_desc">Народные мстители, которые сражались в тылу врага на протяжении всей оккупации.</p>
+                            <div class="hero-stats-mini">
+                                <span><i class="fas fa-fire"></i> <span data-lang-key="heroes_unconquered">Непокорённые</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-card">
+                        <div class="hero-image">
+                            <img src="img-80/life.webp" alt="Мирные жители">
+                            <div class="hero-overlay-card">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="hero-info">
+                            <h3 data-lang-key="heroes_civilians">Мирные жители</h3>
+                            <p data-lang-key="heroes_civilians_desc">Простые люди, которые помогали фронту, прятали раненых и верили в победу.</p>
+                            <div class="hero-stats-mini">
+                                <span><i class="fas fa-hands-helping"></i> <span data-lang-key="heroes_unity">Единство народа</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section class="memory-section">
+                <h2 class="section-title">
+                    <i class="fas fa-camera"></i>
+                    <span data-lang-key="section_title_war_3">Галерея памяти</span>
+                </h2>
+                <div class="memory-gallery">
+                    <div class="memory-item" data-category="celebration">
+                        <img src="img-80/happy-1.webp" alt="Торжественные празднования">
+                        <div class="memory-overlay">
+                            <h4>Торжественные празднования</h4>
+                            <p>3 июля 2025</p>
+                            <button class="view-btn"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="memory-item" data-category="celebration">
+                        <img src="img-80/happy-2.webp" alt="Торжественные мероприятия">
+                        <div class="memory-overlay">
+                            <h4>Торжественные мероприятия</h4>
+                            <p>Современные традиции</p>
+                            <button class="view-btn"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="memory-item" data-category="celebration">
+                        <img src="img-80/happy-3.webp" alt="Народные гуляния">
+                        <div class="memory-overlay">
+                            <h4>Народные гуляния</h4>
+                            <p>Радость Победы</p>
+                            <button class="view-btn"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="memory-item" data-category="celebration">
+                        <img src="img-80/happy-4.webp" alt="Семейные праздники">
+                        <div class="memory-overlay">
+                            <h4>Семейные праздники</h4>
+                            <p>Единство поколений</p>
+                            <button class="view-btn"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="memory-item" data-category="celebration">
+                        <img src="img-80/happy-5.webp" alt="Молодёжные мероприятия">
+                        <div class="memory-overlay">
+                            <h4>Молодёжные мероприятия</h4>
+                            <p>Память в сердцах</p>
+                            <button class="view-btn"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="memory-item" data-category="memorial">
+                        <img src="img-80/memorial-1.jpg" alt="Мемориал Победы">
+                        <div class="memory-overlay">
+                            <h4>Мемориал Победы</h4>
+                            <p>Вечная память героям</p>
+                            <button class="view-btn"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="memory-item" data-category="memorial">
+                        <img src="img-80/memorial-2.webp" alt="Памятники героям">
+                        <div class="memory-overlay">
+                            <h4>Памятники героям</h4>
+                            <p>Дань уважения</p>
+                            <button class="view-btn"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="memory-item hidden-initially" data-category="memorial">
+                        <img src="img-80/memorial-3.webp" alt="Мемориальный комплекс">
+                        <div class="memory-overlay">
+                            <h4>Мемориальный комплекс</h4>
+                            <p>Место скорби и памяти</p>
+                            <button class="view-btn"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="memory-item hidden-initially" data-category="memorial">
+                        <img src="img-80/memorial-4.webp" alt="Братские могилы">
+                        <div class="memory-overlay">
+                            <h4>Братские могилы</h4>
+                            <p>Покой павших героев</p>
+                            <button class="view-btn"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="memory-item hidden-initially" data-category="memorial">
+                        <img src="img-80/memorial-5.webp" alt="Памятные места">
+                        <div class="memory-overlay">
+                            <h4>Памятные места</h4>
+                            <p>История в камне</p>
+                            <button class="view-btn"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="memory-item hidden-initially" data-category="veterans">
+                        <img src="img-80/venetans-1.jpg" alt="Ветераны сегодня">
+                        <div class="memory-overlay">
+                            <h4>Ветераны сегодня</h4>
+                            <p>Живые свидетели истории</p>
+                            <button class="view-btn"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="memory-item hidden-initially" data-category="veterans">
+                        <img src="img-80/veterans-2.webp" alt="Встречи с ветеранами">
+                        <div class="memory-overlay">
+                            <h4>Встречи с ветеранами</h4>
+                            <p>Передача опыта молодёжи</p>
+                            <button class="view-btn"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="memory-item hidden-initially" data-category="veterans">
+                        <img src="img-80/veterans-3.webp" alt="Чествование героев">
+                        <div class="memory-overlay">
+                            <h4>Чествование героев</h4>
+                            <p>Почёт и уважение</p>
+                            <button class="view-btn"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="memory-item hidden-initially" data-category="veterans">
+                        <img src="img-80/veterans-4.webp" alt="Ветеранские встречи">
+                        <div class="memory-overlay">
+                            <h4>Ветеранские встречи</h4>
+                            <p>Братство по оружию</p>
+                            <button class="view-btn"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="memory-item hidden-initially" data-category="veterans">
+                        <img src="img-80/veterans-5.webp" alt="Молодёжь и ветераны">
+                        <div class="memory-overlay">
+                            <h4>Молодёжь и ветераны</h4>
+                            <p>Связь поколений</p>
+                            <button class="view-btn"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all" data-lang-key="gallery_filter_all">Все фото</button>
+                    <button class="filter-btn" data-filter="celebration" data-lang-key="gallery_filter_celebration">Празднование</button>
+                    <button class="filter-btn" data-filter="memorial" data-lang-key="gallery_filter_memorial">Мемориалы</button>
+                    <button class="filter-btn" data-filter="history" data-lang-key="gallery_filter_history">Исторические кадры</button>
+                </div>
+                
+                <div class="load-more-container">
+                    <button class="load-more-btn" id="loadMorePhotos">
+                        <i class="fas fa-plus"></i>
+                        Показать ещё фотографии
+                    </button>
+                </div>
+            </section>
+
+            
+            <section class="quotes-section">
+                <h2 class="section-title">
+                    <i class="fas fa-quote-right"></i>
+                    <span data-lang-key="section_title_war_4">Цитаты и высказывания</span>
+                </h2>
+                <div class="quotes-carousel">
+                    <div class="quote-item active">
+                        <div class="quote-content">
+                            <blockquote data-lang-key="quote_1">"Никто не забыт, ничто не забыто"</blockquote>
+                            <cite>— Александр Лукашенко</cite>
+                        </div>
+                        <div class="quote-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="quote-item">
+                        <div class="quote-content">
+                            <blockquote data-lang-key="quote_3">"Мы помним, какой ценой завоёван мир, и никогда не забудем героев, подаривших нам свободу."</blockquote>
+                            <cite>— Из обращения к народу</cite>
+                        </div>
+                        <div class="quote-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="quote-item">
+                        <div class="quote-content">
+                            <blockquote data-lang-key="quote_2">"Память о войне — это не только прошлое, это наш долг перед будущими поколениями."</blockquote>
+                            <cite>— Завет потомкам</cite>
+                        </div>
+                        <div class="quote-icon">
+                            <i class="fas fa-infinity"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="carousel-dots">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                    </div>
+                    <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </section>
+
+            <!-- <section class="events-section">
+                <h2 class="section-title">
+                    <i class="fas fa-calendar-alt"></i>
+                    Памятные мероприятия 2025
+                </h2>
+                <div class="events-grid">
+                    <div class="event-card">
+                        <div class="event-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Торжественные церемонии</h3>
+                        <p>Торжественные мероприятия в честь 80-летия победы  на площади Независимости в Минске.</p>
+                        <div class="event-date">3 июля 2025</div>
+                    </div>
+                    
+                    <div class="event-card">
+                        <div class="event-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h3>Вечный огонь</h3>
+                        <p>Церемония возложения венков к Вечному огню и минута молчания в память о павших героях.</p>
+                        <div class="event-date">Июль 2025</div>
+                    </div>
+                    
+                    <div class="event-card">
+                        <div class="event-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Встречи поколений</h3>
+                        <p>Встречи молодёжи с ветеранами войны тыла для передачи исторической памяти.</p>
+                        <div class="event-date">В течение года</div>
+                    </div>
+                    
+                    <div class="event-card">
+                        <div class="event-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Фестиваль памяти</h3>
+                        <p>Культурный фестиваль с концертами, выставками и театральными постановками о войне.</p>
+                        <div class="event-date">Август 2025</div>
+                    </div>
+                </div>
+            </section> -->
+
+            
+            <section class="cta-section">
+                <div class="cta-content">
+                    <h2 data-lang-key="lll">Подробная лента времени</h2>
+                    <div class="cta-buttons">
+                        <a href="timeline.html" class="cta-btn primary">
+                            <i class="fas fa-timeline"></i>
+                            Интерактивная лента времени
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="ornament-bar"></div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/auth-simple.js"></script>
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/liberation80-interactive.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+  // Создаем модальные окна авторизации
+  createAuthModals();
+  
+  // Инициализация авторизации с перенаправлением на главную страницу
+  setTimeout(() => {
+    updateAuthUIWithRedirect();
+  }, 100);
+  
+  const sections = document.querySelectorAll('.award-section.creative');
+  const observer = new window.IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('award-visible');
+      }
+    });
+  }, { threshold: 0.2 });
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+});
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav');
+            
+            if (menuToggle && nav) {
+                menuToggle.addEventListener('click', function() {
+                    menuToggle.classList.toggle('is-active');
+                    nav.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
+

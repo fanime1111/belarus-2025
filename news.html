@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="site_title_news">Новости - Беларусь 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../god-blagoustroistva2025-04.ico" type="image/x-icon">
+
+</head>
+<body>
+    <header class="header-full-nav  header-adaptive">
+        <div class="container">
+                        <div class="logo" data-lang-key="logo_text">Беларусь 2025: Благоустройство</div>
+            <label class="burger" for="burger">
+                <input type="checkbox" id="burger" />
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html" data-lang-key="nav_main">Главная</a></li>
+                    <li><a href="about.html" data-lang-key="nav_about">О программе</a></li>
+                    <li><a href="projects.html" data-lang-key="nav_projects">Проекты</a></li>
+                    <li><a href="news.html" class="active" data-lang-key="nav_news">Новости</a></li>
+                    <li><a href="gallery.html" data-lang-key="nav_gallery">Галерея</a></li>
+                    <li><a href="awards.html" data-lang-key="nav_awards">Достижения</a></li>
+                                         <li><a href="liberation80.html" data-lang-key="nav_liberation80">80 лет освобождения</a></li> 
+                </ul>
+            </nav>
+            <div class="lang-switcher">
+                <button id="lang-ru" class="lang-btn active" data-lang="ru">RU</button>
+                <button id="lang-by" class="lang-btn" data-lang="by">BY</button>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">
+                    <span class="theme-toggle-slider"></span>
+                </button>
+                <button id="mobile-theme-btn" class="mobile-theme-btn" aria-label="Переключить тему">☀️</button>
+            </div>
+            <div class="auth-buttons">
+                <button id="login-btn">Вход</button>
+                <button id="register-btn">Регистрация</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container page-content animate-on-scroll">
+            <div style="display: flex; justify-content: flex-end; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+            <button id="add-news-btn" class="add-news-btn"><span class="add-icon">+</span>Добавить новость</button>
+            </div>
+            <h1 data-lang-key="news_page_title">Новости программы</h1>
+        </div>
+        <div class="news-list-container"></div>
+        <div class="container page-content animate-on-scroll" id="news-container">
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_3_title">Гомельский литейный завод "Центролит" возобновил поставки в адрес московского метрополитена</h3>
+                <h3 data-lang-key="news_3_title_by" style="display:none">Гомельский литейный завод "Центролит" возобновил поставки в адрес московского метрополитена</h3>
+                <p class="news-date" data-lang-key="news_3_date_label">Дата: <span data-lang-key="news_3_date_value">20.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_3_date_label_by" style="display:none">Дата: <span data-lang-key="news_3_date_value_by">20.07.2025</span></p>
+                <p data-lang-key="news_3_text">Гомельский литейный завод "Центролит" вновь начал поставки продукции для московского метрополитена. Это стало возможным благодаря модернизации производства и расширению ассортимента.</p>
+                <p data-lang-key="news_3_text_by" style="display:none">Гомельскі літэйны завод "Цэнтраліт" уновіў паставы ў адзінкавым адносінствах з Москвым метрополітанам. Гэта стала магчымая ўзможнасць з-за модэрынацыі вытворчасці і пашырэння ассортыменту.</p>
+                <img src="img-news/news-3.jpg" alt="Центролит" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_4_title">МТЗ установит в литейных цехах пять индукционных печей в 2025-2026 годах</h3>
+                <h3 data-lang-key="news_4_title_by" style="display:none">МТЗ установит в литейных цехах пять индукционных печей в 2025-2026 годах</h3>
+                <p class="news-date" data-lang-key="news_4_date_label">Дата: <span data-lang-key="news_4_date_value">20.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_4_date_label_by" style="display:none">Дата: <span data-lang-key="news_4_date_value_by">20.07.2025</span></p>
+                <p data-lang-key="news_4_text">Минский тракторный завод планирует установить пять новых индукционных печей в литейных цехах в 2025-2026 годах для повышения эффективности производства.</p>
+                <p data-lang-key="news_4_text_by" style="display:none">Мінскі тракторны завод плануе ўсталяваць пяць новых індыкцыйных пэчаў у літэйных цехах у 2025-2026 годах для павышэння эфектыўнасці вытворчасці.</p>
+                <img src="img-news/news-4.jpg" alt="МТЗ литейный цех" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_5_title">Считывание кода маркировки товаров на кассах может происходить в тестовом режиме до 1 ноября</h3>
+                <h3 data-lang-key="news_5_title_by" style="display:none">Считывание кода маркировки товаров на кассах может происходить в тестовом режиме до 1 ноября</h3>
+                <p class="news-date" data-lang-key="news_5_date_label">Дата: <span data-lang-key="news_5_date_value">20.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_5_date_label_by" style="display:none">Дата: <span data-lang-key="news_5_date_value_by">20.07.2025</span></p>
+                <p data-lang-key="news_5_text">Считывание кода маркировки товаров на кассах в Беларуси может происходить в тестовом режиме до 1 ноября 2025 года.</p>
+                <p data-lang-key="news_5_text_by" style="display:none">Счытвае код маркіравання прадуктаў на касах у Беларусі можа адбывацца ў тэставам рэжыме да 1 снежня 2025 года.</p>
+                <img src="img-news/news-5.jpg" alt="Маркировка товаров" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_39_title">Беларусь рассчитывает увеличить поставки мясо-молочной продукции в Сербию</h3>
+                <h3 data-lang-key="news_39_title_by" style="display:none">Беларусь рассчитывает увеличить поставки мясо-молочной продукции в Сербию</h3>
+                <p class="news-date" data-lang-key="news_39_date_label">Дата: <span data-lang-key="news_39_date_value">20.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_39_date_label_by" style="display:none">Дата: <span data-lang-key="news_39_date_value_by">20.07.2025</span></p>
+                <p data-lang-key="news_39_text">Беларусь планирует увеличить объёмы экспорта мясо-молочной продукции в Сербию. Ведутся переговоры о расширении ассортимента поставляемых товаров и упрощении процедур сертификации.</p>
+                <p data-lang-key="news_39_text_by" style="display:none">Беларусь плануе павялічыць аб'ёмы экспарту мяса-молчачнай прадукцыі ў Сербію. Вядуцца перагаворы аб пашырэнні ассортыменту паставляемых прадуктаў і ўпростэнні працэдураў сертыфікацыі.</p>
+                <img src="img-news/news-39.jpg" alt="Фото новости 39" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_6_title">МТЗ рассматривает возможность внедрения 3D-принтеров в производстве литейных форм</h3>
+                <h3 data-lang-key="news_6_title_by" style="display:none">МТЗ рассматривает возможность внедрения 3D-принтеров в производстве литейных форм</h3>
+                <p class="news-date" data-lang-key="news_6_date_label">Дата: <span data-lang-key="news_6_date_value">20.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_6_date_label_by" style="display:none">Дата: <span data-lang-key="news_6_date_value_by">20.07.2025</span></p>
+                <p data-lang-key="news_6_text">Минский тракторный завод рассматривает возможность внедрения 3D-принтеров для производства литейных форм, что позволит ускорить и удешевить процесс.</p>
+                <p data-lang-key="news_6_text_by" style="display:none">Мінскі тракторны завод рассматривае магчымасць ўвадзення 3D-прынтераў для вытворчасці літэйных форм, што дазволіць паскараць і ўдэшыць працэс.</p>
+                <img src="img-news/news-6.jpg" alt="3D-принтеры МТЗ" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_7_title">Минэкономики: реализация перспективных инвестпроектов создает новые точки роста экономики регионов</h3>
+                <h3 data-lang-key="news_7_title_by" style="display:none">Мінэканамікі: рэалізацыя перспектыўных інвестыцыйных праектаў стварае новыя кропкі росту эканамікі рэгіёнаў</h3>
+                <p class="news-date" data-lang-key="news_7_date_label">Дата: <span data-lang-key="news_7_date_value">19.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_7_date_label_by" style="display:none">Дата: <span data-lang-key="news_7_date_value_by">19.07.2025</span></p>
+                <p data-lang-key="news_7_text">Реализация перспективных инвестиционных проектов способствует появлению новых точек роста экономики в регионах Беларуси.</p>
+                <p data-lang-key="news_7_text_by" style="display:none">Рэалізацыя перспектыўных інвестыцыйных праектаў стварае новыя кропкі росту эканамікі ў рэгіёнах Беларусі.</p>
+                <img src="img-news/news-7.jpg" alt="Инвестпроекты" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_8_title">Более 550 тыс. акций "Коммунарки" будут безвозмездно переданы государству</h3>
+                <h3 data-lang-key="news_8_title_by" style="display:none">Больш за 550 тысяч акцый "Каммунарка" будуць безвыплатны перададзены государству</h3>
+                <p class="news-date" data-lang-key="news_8_date_label">Дата: <span data-lang-key="news_8_date_value">19.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_8_date_label_by" style="display:none">Дата: <span data-lang-key="news_8_date_value_by">19.07.2025</span></p>
+                <p data-lang-key="news_8_text">Более 550 тысяч акций фабрики "Коммунарка" будут безвозмездно переданы государству.</p>
+                <p data-lang-key="news_8_text_by" style="display:none">Больш за 550 тысяч акцый фабрикі "Каммунарка" будуць безвыплатны перададзены государству.</p>
+                <img src="img-news/news-8.jpg" alt="Коммунарка" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_11_title">МТЗ внедрит новую технологию литья в 2026 году</h3>
+                <h3 data-lang-key="news_11_title_by" style="display:none">МТЗ внедрит новую технологию литья в 2026 году</h3>
+                <p class="news-date" data-lang-key="news_11_date_label">Дата: <span data-lang-key="news_11_date_value">19.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_11_date_label_by" style="display:none">Дата: <span data-lang-key="news_11_date_value_by">19.07.2025</span></p>
+                <p data-lang-key="news_11_text">МТЗ внедрит новую технологию литья в 2026 году для повышения качества продукции и эффективности производства.</p>
+                <p data-lang-key="news_11_text_by" style="display:none">МТЗ ўвадзіць новую тэхналагію літэння ў 2026 годзе для павышэння якасці прадукцыі і эфектыўнасці вытворчасці.</p>
+                <img src="img-news/news-11.jpg" alt="Фото новости 11" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_12_title">Беларусь впервые приняла участие в бизнес-форуме ШОС в статусе полноправного члена</h3>
+                <h3 data-lang-key="news_12_title_by" style="display:none">Беларусь впервые приняла участие в бизнес-форуме ШОС в статусе полноправного члена</h3>
+                <p class="news-date" data-lang-key="news_12_date_label">Дата: <span data-lang-key="news_12_date_value">19.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_12_date_label_by" style="display:none">Дата: <span data-lang-key="news_12_date_value_by">19.07.2025</span></p>
+                <p data-lang-key="news_12_text">Беларусь впервые приняла участие в бизнес-форуме ШОС в статусе полноправного члена, что открывает новые возможности для сотрудничества.</p>
+                <p data-lang-key="news_12_text_by" style="display:none">Беларусь упершыню ўдзельнічае ў бізнес-форуме ШОС у статусе полноправного члена, што адкрывае новыя магчымасці для сяродняцтва.</p>
+                <img src="img-news/news-12.jpg" alt="Фото новости 12" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+           
+
+
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_14_title">Беларусь и Россия обсудили вопросы обеспечения взаимного допуска к биржевым торгам в сфере сельского хозяйства</h3>
+                <h3 data-lang-key="news_14_title_by" style="display:none">Беларусь і Расія абмяркоўвалі пытанні забеспячэння взаемнага дапуска да біржавых торгаў у абласці сялянскага гаспадарства</h3>
+                <p class="news-date" data-lang-key="news_14_date_label">Дата: <span data-lang-key="news_14_date_value">19.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_14_date_label_by" style="display:none">Дата: <span data-lang-key="news_14_date_value_by">19.07.2025</span></p>
+                <p data-lang-key="news_14_text">В Минске прошли переговоры между представителями Беларуси и России по вопросам взаимного допуска к биржевым торгам сельскохозяйственной продукцией. Стороны обсудили механизмы упрощения процедур, обмена информацией и расширения ассортимента товаров. Ожидается, что достигнутые договорённости позволят повысить эффективность торговли и укрепить экономические связи между странами.</p>
+                <p data-lang-key="news_14_text_by" style="display:none">У Мінску прайшлі перагаворы паміж удзельнікамі Беларусі і Расіі па пытаннях взаемнага дапуска да біржавых торгаў сялянскай прадукцыяй. Стороны абмяркоўвалі механізмы ўпростэння працэдураў, абмену інфармацыяй і пашырэння ассортыменту прадуктаў. Ажыццяўляецца ачыканне, што дасягнутыя дамовы дазволіць павысіць эфектыўнасць торгаў і ўздымаць эканамічныя звязкі паміж краінамі.</p>
+                <img src="img-news/news-14.jpg" alt="Фото новости 14" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+
+
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_13_title">Модернизация и повышение конкурентоспособности: дальнейшие шаги по развитию МТЗ</h3>
+                <h3 data-lang-key="news_13_title_by" style="display:none">Модернизация и повышение конкурентоспособности: дальнейшие шаги по развитию МТЗ</h3>
+                <p class="news-date" data-lang-key="news_13_date_label">Дата: <span data-lang-key="news_13_date_value">18.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_13_date_label_by" style="display:none">Дата: <span data-lang-key="news_13_date_value_by">18.07.2025</span></p>
+                <p data-lang-key="news_13_text">МТЗ продолжает масштабную модернизацию производственных мощностей. В ближайшие годы предприятие планирует внедрить новые технологии, повысить качество продукции и расширить экспорт. Особое внимание уделяется автоматизации процессов и развитию кадрового потенциала. Эти шаги позволят МТЗ укрепить позиции на мировом рынке сельхозтехники.</p>
+                <p data-lang-key="news_13_text_by" style="display:none">МТЗ працягвае масштабную модэрынацыю вытворчых магутнасцей. У бліжэйшыя гады прадпрыемства плануе ўвадзіць новыя тэхналагіі, павысіць якасць прадукцыі і пашырыць экспарт. Асаблівае значэнне надаецца аўтаматызацыі працэсаў і распрацоўцы кадровага патэнцыяла. Гэтыя крокі дазволіць МТЗ ўздымаць пазіцыі на міравам рынку сяляхозтэхнікі.</p>
+                <img src="img-news/news-13.jpg" alt="Фото новости 13" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_15_title">Минэкономики: за последние 4 года выплачено около Br65 млн просроченной заработной платы</h3>
+                <h3 data-lang-key="news_15_title_by" style="display:none">Мінэканамікі: за апошнія 4 гады выплачана амаль Br65 млн просрочанай заробнай платы</h3>
+                <p class="news-date" data-lang-key="news_15_date_label">Дата: <span data-lang-key="news_15_date_value">18.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_15_date_label_by" style="display:none">Дата: <span data-lang-key="news_15_date_value_by">18.07.2025</span></p>
+                <p data-lang-key="news_15_text">Министерство экономики Беларуси сообщает, что за последние четыре года предприятия страны выплатили работникам около 65 миллионов рублей просроченной заработной платы. Ведомство отмечает положительную динамику по снижению задолженности и усилению контроля за своевременной выплатой зарплат. Работа в этом направлении будет продолжена для обеспечения социальной стабильности.</p>
+                <p data-lang-key="news_15_text_by" style="display:none">Міністэрства эканамікі Беларусі абвясціла, што за апошнія чатыры гады прадпрыемства краіны выплацілі работнікам амаль 65 мільёнаў рублёў просрочанай заробнай плаціты. Вядомства адзначае дадатныя тэндэнцыі па памяншэнні залдоўнасці і павялічэнню кантролю за самачасоваю выплату зарплат. Работа ў гэтым напрамку будзе працягвацца для забяспечэння сяродняцтва.</p>
+                <img src="img-news/news-15.jpg" alt="Фото новости 15" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_16_title">Беларусь и Удмуртия договорились о развитии биржевой торговли</h3>
+                <h3 data-lang-key="news_16_title_by" style="display:none">Беларусь і Удмуртыя дамоўліся аб распрацоўцы біржавай тэрмы</h3>
+                <p class="news-date" data-lang-key="news_16_date_label">Дата: <span data-lang-key="news_16_date_value">18.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_16_date_label_by" style="display:none">Дата: <span data-lang-key="news_16_date_value_by">18.07.2025</span></p>
+                <p data-lang-key="news_16_text">В ходе переговоров между представителями Беларуси и Удмуртии достигнута договорённость о развитии биржевой торговли между регионами. Стороны обсудили перспективы расширения товарооборота, внедрения новых торговых инструментов и обмена опытом в сфере биржевой деятельности. Ожидается, что сотрудничество позволит повысить эффективность торговли и создать новые возможности для бизнеса.</p>
+                <p data-lang-key="news_16_text_by" style="display:none">У працэсе перагавораў паміж удзельнікамі Беларусі і Удмуртыі дасягнута дамовы аб распрацоўцы біржавай тэрмы паміж рэгіёнамі. Стороны абмяркоўвалі перспектывы пашырэння товараабыту, ўвадзення новых тэрмычных інструментаў і абмену апытам у абласці біржавай дзейнасці. Ажыццяўляецца ачыканне, што сяродняцтва дазволіць павысіць эфектыўнасць торгаў і ствараць новыя магчымасці для бізнесу.</p>
+                <img src="img-news/news-16.jpg" alt="Фото новости 16" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_17_title">Беларусь значительно увеличила поставки продукции АПК в Тульскую область</h3>
+                <h3 data-lang-key="news_17_title_by" style="display:none">Беларусь значна павялічыла паставы прадукцыі АПК ў Тульскую вобласць</h3>
+                <p class="news-date" data-lang-key="news_17_date_label">Дата: <span data-lang-key="news_17_date_value">18.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_17_date_label_by" style="display:none">Дата: <span data-lang-key="news_17_date_value_by">18.07.2025</span></p>
+                <p data-lang-key="news_17_text">Белорусские предприятия агропромышленного комплекса существенно нарастили объёмы поставок продукции в Тульскую область России. В числе экспортируемых товаров — молочная продукция, мясо, овощи и зерно. Рост поставок обусловлен высоким качеством белорусских товаров и расширением сотрудничества между регионами.</p>
+                <p data-lang-key="news_17_text_by" style="display:none">Беларускія прадпрыемствы агрэпрымышленага камплексу значна павялічылі аб'ёмы паставкі прадукцыі ў Тульскую вобласць Расіі. У сярэдзіне экспартуемых прадуктаў — молчачная прадукцыя, мясо, вагуль і зерно. Рост паставкі абусловлен высокім якасцю беларускіх прадуктаў і пашырэннем сяродняцтва паміж рэгіёнамі.</p>
+                <img src="img-news/news-17.jpg" alt="Фото новости 17" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+
+
+
+
+           
+
+
+
+
+
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_13_title">Модернизация и повышение конкурентоспособности: дальнейшие шаги по развитию МТЗ</h3>
+                <h3 data-lang-key="news_13_title_by" style="display:none">Модернизация и повышение конкурентоспособности: дальнейшие шаги по развитию МТЗ</h3>
+                <p class="news-date" data-lang-key="news_13_date_label">Дата: <span data-lang-key="news_13_date_value">18.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_13_date_label_by" style="display:none">Дата: <span data-lang-key="news_13_date_value_by">18.07.2025</span></p>
+                <p data-lang-key="news_13_text">МТЗ продолжает масштабную модернизацию производственных мощностей. В ближайшие годы предприятие планирует внедрить новые технологии, повысить качество продукции и расширить экспорт. Особое внимание уделяется автоматизации процессов и развитию кадрового потенциала. Эти шаги позволят МТЗ укрепить позиции на мировом рынке сельхозтехники.</p>
+                <p data-lang-key="news_13_text_by" style="display:none">МТЗ працягвае масштабную модэрынацыю вытворчых магутнасцей. У бліжэйшыя гады прадпрыемства плануе ўвадзіць новыя тэхналагіі, павысіць якасць прадукцыі і пашырыць экспарт. Асаблівае значэнне надаецца аўтаматызацыі працэсаў і распрацоўцы кадровага патэнцыяла. Гэтыя крокі дазволіць МТЗ ўздымаць пазіцыі на міравам рынку сяляхозтэхнікі.</p>
+                <img src="img-news/news-13.jpg" alt="Фото новости 13" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_15_title">Минэкономики: за последние 4 года выплачено около Br65 млн просроченной заработной платы</h3>
+                <h3 data-lang-key="news_15_title_by" style="display:none">Мінэканамікі: за апошнія 4 гады выплачана амаль Br65 млн просрочанай заробнай платы</h3>
+                <p class="news-date" data-lang-key="news_15_date_label">Дата: <span data-lang-key="news_15_date_value">18.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_15_date_label_by" style="display:none">Дата: <span data-lang-key="news_15_date_value_by">18.07.2025</span></p>
+                <p data-lang-key="news_15_text">Министерство экономики Беларуси сообщает, что за последние четыре года предприятия страны выплатили работникам около 65 миллионов рублей просроченной заработной платы. Ведомство отмечает положительную динамику по снижению задолженности и усилению контроля за своевременной выплатой зарплат. Работа в этом направлении будет продолжена для обеспечения социальной стабильности.</p>
+                <p data-lang-key="news_15_text_by" style="display:none">Міністэрства эканамікі Беларусі абвясціла, што за апошнія чатыры гады прадпрыемства краіны выплацілі работнікам амаль 65 мільёнаў рублёў просрочанай заробнай плаціты. Вядомства адзначае дадатныя тэндэнцыі па памяншэнні залдоўнасці і павялічэнню кантролю за самачасоваю выплату зарплат. Работа ў гэтым напрамку будзе працягвацца для забяспечэння сяродняцтва.</p>
+                <img src="img-news/news-15.jpg" alt="Фото новости 15" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_16_title">Беларусь и Удмуртия договорились о развитии биржевой торговли</h3>
+                <h3 data-lang-key="news_16_title_by" style="display:none">Беларусь і Удмуртыя дамоўліся аб распрацоўцы біржавай тэрмы</h3>
+                <p class="news-date" data-lang-key="news_16_date_label">Дата: <span data-lang-key="news_16_date_value">18.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_16_date_label_by" style="display:none">Дата: <span data-lang-key="news_16_date_value_by">18.07.2025</span></p>
+                <p data-lang-key="news_16_text">В ходе переговоров между представителями Беларуси и Удмуртии достигнута договорённость о развитии биржевой торговли между регионами. Стороны обсудили перспективы расширения товарооборота, внедрения новых торговых инструментов и обмена опытом в сфере биржевой деятельности. Ожидается, что сотрудничество позволит повысить эффективность торговли и создать новые возможности для бизнеса.</p>
+                <p data-lang-key="news_16_text_by" style="display:none">У працэсе перагавораў паміж удзельнікамі Беларусі і Удмуртыі дасягнута дамовы аб распрацоўцы біржавай тэрмы паміж рэгіёнамі. Стороны абмяркоўвалі перспектывы пашырэння товараабыту, ўвадзення новых тэрмычных інструментаў і абмену апытам у абласці біржавай дзейнасці. Ажыццяўляецца ачыканне, што сяродняцтва дазволіць павысіць эфектыўнасць торгаў і ствараць новыя магчымасці для бізнесу.</p>
+                <img src="img-news/news-16.jpg" alt="Фото новости 16" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_17_title">Беларусь значительно увеличила поставки продукции АПК в Тульскую область</h3>
+                <h3 data-lang-key="news_17_title_by" style="display:none">Беларусь значна павялічыла паставы прадукцыі АПК ў Тульскую вобласць</h3>
+                <p class="news-date" data-lang-key="news_17_date_label">Дата: <span data-lang-key="news_17_date_value">18.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_17_date_label_by" style="display:none">Дата: <span data-lang-key="news_17_date_value_by">18.07.2025</span></p>
+                <p data-lang-key="news_17_text">Белорусские предприятия агропромышленного комплекса существенно нарастили объёмы поставок продукции в Тульскую область России. В числе экспортируемых товаров — молочная продукция, мясо, овощи и зерно. Рост поставок обусловлен высоким качеством белорусских товаров и расширением сотрудничества между регионами.</p>
+                <p data-lang-key="news_17_text_by" style="display:none">Беларускія прадпрыемствы агрэпрымышленага камплексу значна павялічылі аб'ёмы паставкі прадукцыі ў Тульскую вобласць Расіі. У сярэдзіне экспартуемых прадуктаў — молчачная прадукцыя, мясо, вагуль і зерно. Рост паставкі абусловлен высокім якасцю беларускіх прадуктаў і пашырэннем сяродняцтва паміж рэгіёнамі.</p>
+                <img src="img-news/news-17.jpg" alt="Фото новости 17" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+
+
+
+
+
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_18_title">Развитие торгово-экономического взаимодействия обсудили министры промышленности Беларуси и РФ</h3>
+                <h3 data-lang-key="news_18_title_by" style="display:none">Развитие торгово-экономического взаимодействия обсудили министры промышленности Беларуси и РФ</h3>
+                <p class="news-date" data-lang-key="news_18_date_label">Дата: <span data-lang-key="news_18_date_value">17.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_18_date_label_by" style="display:none">Дата: <span data-lang-key="news_18_date_value_by">17.07.2025</span></p>
+                <p data-lang-key="news_18_text">Министры промышленности Беларуси и России провели встречу, на которой обсудили вопросы развития торгово-экономического взаимодействия между странами. Особое внимание уделялось совместным проектам, обмену технологиями и поддержке промышленного сектора. Стороны выразили уверенность в дальнейшем укреплении партнёрских отношений.</p>
+                <p data-lang-key="news_18_text_by" style="display:none">Міністры прамышленасці Беларусі і Расіі правела ўзаемую ўзаемапраця, на якой абмяркоўвалі пытанні распрацоўкі тэрмычнага ўзаемадзеяння паміж краінамі. Асаблівае значэнне надаецца сумесным праектам, абмену тэхналагіямі і падтрымцы прамышленага сектара. Стороны выразілі ўвераганасць у наступным уздымкі партнёрскіх адносін.</p>
+                <img src="img-news/news-18.jpg" alt="Фото новости 18" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_19_title">Лаос заинтересовался возможностями Беларуси в производстве калийных удобрений и детского питания</h3>
+                <h3 data-lang-key="news_19_title_by" style="display:none">Лаос заинтересовался возможностями Беларуси в производстве калийных удобрений и детского питания</h3>
+                <p class="news-date" data-lang-key="news_19_date_label">Дата: <span data-lang-key="news_19_date_value">17.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_19_date_label_by" style="display:none">Дата: <span data-lang-key="news_19_date_value_by">17.07.2025</span></p>
+                <p data-lang-key="news_19_text">Делегация Лаоса посетила Беларусь с целью изучения возможностей сотрудничества в сфере производства калийных удобрений и детского питания. Стороны обсудили перспективы реализации совместных проектов, обмена технологиями и расширения экспорта белорусской продукции на рынок Лаоса.</p>
+                <p data-lang-key="news_19_text_by" style="display:none">Дэлегацыя Лаоса ўзяўшы ў Беларусі з мэтай вывучэння магчымасцей сяродняцтва ў абласці вытворчасці калійных удобранняў і дзіцячага пітання. Стороны абмяркоўвалі перспектывы рэалізацыі сумесных праектаў, абмену тэхналагіямі і пашырэння экспарту беларускай прадукцыі на рынак Лаоса.</p>
+                <img src="img-news/news-19.jpg" alt="Фото новости 19" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_20_title">Президент Лаоса предложил Беларуси сотрудничество в добыче полезных ископаемых</h3>
+                <h3 data-lang-key="news_20_title_by" style="display:none">Прадэзідэнт Лаоса прапаў Беларусі сяродняцтва ў дабычы полезных іскопаемых</h3>
+                <p class="news-date" data-lang-key="news_20_date_label">Дата: <span data-lang-key="news_20_date_value">17.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_20_date_label_by" style="display:none">Дата: <span data-lang-key="news_20_date_value_by">17.07.2025</span></p>
+                <p data-lang-key="news_20_text">В ходе официальной встречи президент Лаоса предложил Беларуси сотрудничество в сфере добычи полезных ископаемых. Обсуждались возможности совместной разработки месторождений, обмена опытом и привлечения инвестиций в горнодобывающую отрасль.</p>
+                <p data-lang-key="news_20_text_by" style="display:none">У працэсе афіцыйнай ўзаемапраці президент Лаоса прапаў Беларусі сяродняцтва ў абласці дабычы полезных іскопаемых. Абмяркоўваліся магчымасці сумеснай распрацоўкі месцарождэнняў, абмену апытам і прываблення інвестыцый у горнадобываючую атрасль.</p>
+                <img src="img-news/news-20.jpg" alt="Фото новости 20" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_21_title">Холдинг БЦК увеличил экспорт цемента почти на 5% в первом полугодии</h3>
+                <h3 data-lang-key="news_21_title_by" style="display:none">Холдинг БЦК увеличил экспорт цемента почти на 5% в первом полугодии</h3>
+                <p class="news-date" data-lang-key="news_21_date_label">Дата: <span data-lang-key="news_21_date_value">17.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_21_date_label_by" style="display:none">Дата: <span data-lang-key="news_21_date_value_by">17.07.2025</span></p>
+                <p data-lang-key="news_21_text">Холдинг "Белорусская цементная компания" в первом полугодии 2025 года увеличил экспорт цемента почти на 5%. Основными рынками сбыта стали страны СНГ и Балтии. Рост экспорта обусловлен модернизацией производств и повышением качества продукции.</p>
+                <p data-lang-key="news_21_text_by" style="display:none">Холдинг "Беларуская цементная кампанія" у першым паўгадзіні 2025 года павялічыў экспарт цементу на 5%. Асноўнымі рынкамі сбыту былі краіны СНГ і Балтыя. Рост экспарту абусловлен модэрынацыяй вытворчасці і павышэннем якасці прадукцыі.</p>
+                <img src="img-news/news-21.jpg" alt="Фото новости 21" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+
+
+
+
+
+
+
+
+
+
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_22_title">Беларусь и ОАЭ планируют реализовать совместные проекты в АПК</h3>
+                <h3 data-lang-key="news_22_title_by" style="display:none">Беларусь і ОАЭ плануюць рэалізаваць сумесныя праекты ў АПК</h3>
+                <p class="news-date" data-lang-key="news_22_date_label">Дата: <span data-lang-key="news_22_date_value">16.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_22_date_label_by" style="display:none">Дата: <span data-lang-key="news_22_date_value_by">16.07.2025</span></p>
+                <p data-lang-key="news_22_text">Беларусь и Объединённые Арабские Эмираты договорились о реализации совместных проектов в агропромышленном комплексе. Стороны обсудили вопросы инвестиций, обмена технологиями и расширения экспорта белорусской продукции на рынок ОАЭ.</p>
+                <p data-lang-key="news_22_text_by" style="display:none">Беларусь і Аб'юднаныя Арабскія Эміраты дамоўліся аб рэалізацыі сумесных праектаў у агрэпрымышленам камплексы. Стороны абмяркоўвалі пытанні інвестыцый, абмену тэхналагіямі і пашырэння экспарту беларускай прадукцыі на рынак АЭ.</p>
+                <img src="img-news/news-22.jpg" alt="Фото новости 22" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_23_title">Денежно-кредитная политика и итоги киберучений: что обсуждали представители нацбанков стран ЕАЭС</h3>
+                <h3 data-lang-key="news_23_title_by" style="display:none">Денежно-кредитная политика и итоги киберучений: что обсуждали представители нацбанков стран ЕАЭС</h3>
+                <p class="news-date" data-lang-key="news_23_date_label">Дата: <span data-lang-key="news_23_date_value">16.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_23_date_label_by" style="display:none">Дата: <span data-lang-key="news_23_date_value_by">16.07.2025</span></p>
+                <p data-lang-key="news_23_text">В Минске состоялась встреча представителей национальных банков стран ЕАЭС, на которой обсуждались вопросы денежно-кредитной политики, кибербезопасности и обмена опытом в сфере финансовых технологий. Особое внимание уделялось итогам совместных киберучений и выработке рекомендаций по повышению устойчивости финансовых систем.</p>
+                <p data-lang-key="news_23_text_by" style="display:none">У Мінску прайшла ўзаемапраца ўдзельнікаў нацыянальных банкаў краін ЕАЭС, на якой абмяркоўвалі пытанні дзенам-крэдытнай палітыкі, кібербезопаснасці і абмену апытам у абласці фінансавых тэхналагій. Асаблівае значэнне надаецца ітогам сумесных кіберучэнняў і вырашэнні рэкамендацый па павышэнню стэйкі фінансавых сістэм.</p>
+                <img src="img-news/news-23.jpg" alt="Фото новости 23" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_24_title">Как будут платить пенсии заключённым: Минтруда о новациях законодательства</h3>
+                <h3 data-lang-key="news_24_title_by" style="display:none">Як будуць плаціць пенсіі заключаным: Мінтруд аб новацыях законадательства</h3>
+                <p class="news-date" data-lang-key="news_24_date_label">Дата: <span data-lang-key="news_24_date_value">16.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_24_date_label_by" style="display:none">Дата: <span data-lang-key="news_24_date_value_by">16.07.2025</span></p>
+                <p data-lang-key="news_24_text">Министерство труда и социальной защиты разъяснило нововведения в законодательстве, касающиеся выплаты пенсий лицам, находящимся в местах лишения свободы. Новые нормы обеспечивают прозрачность и своевременность выплат, а также защиту прав получателей.</p>
+                <p data-lang-key="news_24_text_by" style="display:none">Міністэрства працы і сяродняцкай захава Беларусі разьяснілі новавведзенні ў законадательстве, якія адносяцца да выплаты пенсій асобым, якія знаходзяцца ў месцах лішэння свабоды. Новыя нармы забяспечваюць празрачнасць і самачасовасць выплат, а таксама абарону прав атрымальнікаў.</p>
+                <img src="img-news/news-24.jpg" alt="Фото новости 24" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_25_title">На уборке урожая задействованы 183 молодежных экипажа</h3>
+                <h3 data-lang-key="news_25_title_by" style="display:none">На уборке урожая задействованы 183 молодежных экипажа</h3>
+                <p class="news-date" data-lang-key="news_25_date_label">Дата: <span data-lang-key="news_25_date_value">16.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_25_date_label_by" style="display:none">Дата: <span data-lang-key="news_25_date_value_by">16.07.2025</span></p>
+                <p data-lang-key="news_25_text">В нынешнем сезоне на уборке урожая в Беларуси работают 183 молодежных экипажа. Молодые специалисты вносят значительный вклад в проведение уборочной кампании, демонстрируя высокий профессионализм и ответственность.</p>
+                <p data-lang-key="news_25_text_by" style="display:none">У цяперашнім сезыёне на ўборцы ўрожая ў Беларусі работаюць 183 молодых экіпажа. Младыя спецыялісты ўносць значны ўклад у правядзенне ўборчай кампаніі, прадстаўляючы высокі прафесійныя ўзровень і адказнасць.</p>
+                <img src="img-news/news-25.jpg" alt="Фото новости 25" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_26_title">Резиденты ПВТ представили свои разработки организациям ЖКХ Беларуси</h3>
+                <h3 data-lang-key="news_26_title_by" style="display:none">Рэзідэнты ПВТ прадстаўілі свае рашэнні для арганізацый ЖКХ Беларуси</h3>
+                <p class="news-date" data-lang-key="news_26_date_label">Дата: <span data-lang-key="news_26_date_value">16.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_26_date_label_by" style="display:none">Дата: <span data-lang-key="news_26_date_value_by">16.07.2025</span></p>
+                <p data-lang-key="news_26_text">Резиденты Парка высоких технологий презентовали инновационные решения для организаций жилищно-коммунального хозяйства Беларуси. Среди разработок — системы автоматизации, мониторинга и управления ресурсами, которые позволят повысить эффективность работы ЖКХ.</p>
+                <p data-lang-key="news_26_text_by" style="display:none">Рэзідэнты Парку высокіх тэхналагій прадстаўілі інновацыйныя рашэнні для арганізацый жылішча-камунікацыйнага хацяйства Беларуси. Сярэдзіна рашэнняў — сістэмы аўтаматызацыі, монітарынга і кіравання рэсурсамі, якія дазволіць павысіць эфектыўнасць работы ЖКХ.</p>
+                <img src="img-news/news-26.jpg" alt="Фото новости 26" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+
+
+
+
+
+
+
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_27_title">Гродно Азот продолжит добиваться снятия незаконных санкций</h3>
+                <h3 data-lang-key="news_27_title_by" style="display:none">Гродна Азот працягне дамагацца зняцця незаконных санкцый</h3>
+                <p class="news-date" data-lang-key="news_27_date_label">Дата: <span data-lang-key="news_27_date_value">15.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_27_date_label_by" style="display:none">Дата: <span data-lang-key="news_27_date_value_by">15.07.2025</span></p>
+                <p data-lang-key="news_27_text">ОАО "Гродно Азот" заявило о намерении продолжать работу по снятию незаконных санкций, введённых против предприятия. Руководство компании отмечает, что несмотря на внешние ограничения, завод сохраняет производственные мощности и продолжает выполнять обязательства перед партнёрами.</p>
+                <p data-lang-key="news_27_text_by" style="display:none">ААТ "Гродна Азот" заявіла пра намер працягваць працу па зняцці незаконных санкцый, уведзеных супраць прадпрыемства. Кіраўніцтва кампаніі адзначае, што нягледзячы на знешнія абмежаванні, завод захоўвае вытворчыя магутнасці і працягвае выконваць абавязацельствы перад партнёрамі.</p>
+                <img src="img-news/news-27.jpg" alt="Фото новости 27" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_28_title">МАЗ поставит 120 автобусов особо большой вместимости в Санкт-Петербург</h3>
+                <h3 data-lang-key="news_28_title_by" style="display:none">МАЗ ставіць 120 аўтобусаў асобна вялікай удзелавасці ў Санкт-Пецярбург</h3>
+                <p class="news-date" data-lang-key="news_28_date_label">Дата: <span data-lang-key="news_28_date_value">15.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_28_date_label_by" style="display:none">Дата: <span data-lang-key="news_28_date_value_by">15.07.2025</span></p>
+                <p data-lang-key="news_28_text">Минский автомобильный завод заключил контракт на поставку 120 автобусов особо большой вместимости для транспортной системы Санкт-Петербурга. Новые автобусы будут оснащены современными системами безопасности и комфорта для пассажиров.</p>
+                <p data-lang-key="news_28_text_by" style="display:none">Мінскі аўтамабільны завод уклаў контракт на паставку 120 аўтобусаў асобна вялікай удзелавасці для транспартнай сістэмы Санкт-Пецярбурга. Новая аўтабусаў будуць аснаўлены сучаснымі сістэмамі бяспекі і камфорту для пасажыраў.</p>
+                <img src="img-news/news-28.jpg" alt="Фото новости 28" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_29_title">МАЗ поставит почти сто электробусов большой вместимости в Санкт-Петербург в этом году</h3>
+                <h3 data-lang-key="news_29_title_by" style="display:none">МАЗ ставіць пачыста 100 электробусаў асобна вялікай удзелавасці ў Санкт-Пецярбург у гэтым годзе</h3>
+                <p class="news-date" data-lang-key="news_29_date_label">Дата: <span data-lang-key="news_29_date_value">15.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_29_date_label_by" style="display:none">Дата: <span data-lang-key="news_29_date_value_by">15.07.2025</span></p>
+                <p data-lang-key="news_29_text">В 2025 году МАЗ планирует поставить в Санкт-Петербург почти сто электробусов большой вместимости. Это позволит повысить экологичность городского транспорта и улучшить качество перевозок для жителей города.</p>
+                <p data-lang-key="news_29_text_by" style="display:none">У 2025 году МАЗ плануе паставіць у Санкт-Пецярбург пачыста 100 электробусаў асобна вялікай удзелавасці. Гэта дазволіць павысіць экалогічнасць горадскага транспарту і ўлепіць якасць перавозак для жыхароў горады.</p>
+                <img src="img-news/news-29.jpg" alt="Фото новости 29" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_34_title">Предприятия Беларуси в 1,5 раза увеличили экспорт в Северо-Западный федеральный округ РФ через БУТБ</h3>
+                <h3 data-lang-key="news_34_title_by" style="display:none">Беларускія прадпрыемствы ў 1,5 разы павялічылі экспарт у Севера-Западны федэральны абласць РФ праз БУТБ</h3>
+                <p class="news-date" data-lang-key="news_34_date_label">Дата: <span data-lang-key="news_34_date_value">15.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_34_date_label_by" style="display:none">Дата: <span data-lang-key="news_34_date_value_by">15.07.2025</span></p>
+                <p data-lang-key="news_34_text">Белорусские предприятия увеличили экспорт в Северо-Западный федеральный округ России в 1,5 раза благодаря использованию Белорусской универсальной товарной биржи. Рост экспорта связан с расширением ассортимента и повышением конкурентоспособности продукции.</p>
+                <p data-lang-key="news_34_text_by" style="display:none">Беларускія прадпрыемствы павялічылі экспарт у Севера-Западны федэральны абласць Расіі ў 1,5 разы з улікам выкарыстання Беларускай універсальнай тэрмічнай біржы. Рост экспарту звязан з пашырэннем ассортыменту і павышэннем канкурентнасці прадукцыі.</p>
+                <img src="img-news/news-34.jpg" alt="Фото новости 34" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+
+
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_30_title">Резиденты ПВТ представили цифровые технологии в сфере сельского хозяйства на тематическом семинаре</h3>
+                <h3 data-lang-key="news_30_title_by" style="display:none">Рэзідэнты ПВТ прадстаўілі цыфровыя тэхналогіі ў агульнай сферы сялянскага гаспадарства на тэматычным семінары</h3>
+                <p class="news-date" data-lang-key="news_30_date_label">Дата: <span data-lang-key="news_30_date_value">15.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_30_date_label_by" style="display:none">Дата: <span data-lang-key="news_30_date_value_by">15.07.2025</span></p>
+                <p data-lang-key="news_30_text">На семинаре в Минске резиденты Парка высоких технологий презентовали инновационные цифровые решения для аграрного сектора. Были представлены системы мониторинга, автоматизации и анализа данных, которые помогут повысить эффективность сельскохозяйственного производства.</p>
+                <p data-lang-key="news_30_text_by" style="display:none">На семінары ў Мінску рэзідэнты Парку высокіх тэхналогій прадстаўілі інновацыйныя цыфровыя рашэнні для агульнай сферы сялянскага гаспадарства. Былі прадстаўлены сістэмы монітарынга, аўтаматызацыі і аналізу дадзеных, якія дапамогуць павысіць эфектыўнасць сялянскага гаспадарства.</p>
+                <img src="img-news/news-30.jpg" alt="Фото новости 30" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_31_title">Срочные рублевые депозиты физических лиц в июне увеличились на Br298,3 млн</h3>
+                <h3 data-lang-key="news_31_title_by" style="display:none">Срочные рублевые депозиты физических лиц в июне увеличились на Br298,3 млн</h3>
+                <p class="news-date" data-lang-key="news_31_date_label">Дата: <span data-lang-key="news_31_date_value">15.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_31_date_label_by" style="display:none">Дата: <span data-lang-key="news_31_date_value_by">15.07.2025</span></p>
+                <p data-lang-key="news_31_text">В июне 2025 года объём срочных рублёвых депозитов физических лиц в белорусских банках увеличился на 298,3 миллиона рублей. Рост вкладов свидетельствует о доверии населения к банковской системе и стабильности финансового сектора.</p>
+                <p data-lang-key="news_31_text_by" style="display:none">У іюні 2025 года аб'ём срочных рублевых депазітаў фізічных асоб у беларускіх банках павялічыўся на 298,3 мільёна рублёў. Рост вкладаў паказвае на доверку насельніцтва да банкіўскай сістэмы і стабільнасць фінансавага сектара.</p>
+                <img src="img-news/news-31.jpg" alt="Фото новости 31" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_32_title">Резиденты ПВТ представили свои разработки организациям ЖКХ Беларуси</h3>
+                <h3 data-lang-key="news_32_title_by" style="display:none">Рэзідэнты ПВТ прадстаўілі свае рашэнні для арганізацый ЖКХ Беларуси</h3>
+                <p class="news-date" data-lang-key="news_32_date_label">Дата: <span data-lang-key="news_32_date_value">14.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_32_date_label_by" style="display:none">Дата: <span data-lang-key="news_32_date_value_by">14.07.2025</span></p>
+                <p data-lang-key="news_32_text">Резиденты Парка высоких технологий презентовали инновационные решения для организаций жилищно-коммунального хозяйства Беларуси. Среди разработок — системы автоматизации, мониторинга и управления ресурсами, которые позволят повысить эффективность работы ЖКХ.</p>
+                <p data-lang-key="news_32_text_by" style="display:none">Рэзідэнты Парку высокіх тэхналогій прадстаўілі інновацыйныя рашэнні для арганізацый жылішча-камунікацыйнага хацяйства Беларуси. Сярэдзіна рашэнняў — сістэмы аўтаматызацыі, монітарынга і кіравання рэсурсамі, якія дапамогуць павысіць эфектыўнасць работы ЖКХ.</p>
+                <img src="img-news/news-32.jpg" alt="Фото новости 32" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_33_title">Банк развития наращивает финансовую поддержку экономических инициатив Гродненской области</h3>
+                <h3 data-lang-key="news_33_title_by" style="display:none">Банк распрацоўкі нарашчвае фінансавую падтрымку эканамічных ініцыятываў Гродзенскай вобласці</h3>
+                <p class="news-date" data-lang-key="news_33_date_label">Дата: <span data-lang-key="news_33_date_value">14.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_33_date_label_by" style="display:none">Дата: <span data-lang-key="news_33_date_value_by">14.07.2025</span></p>
+                <p data-lang-key="news_33_text">Банк развития Республики Беларусь увеличивает объёмы финансирования экономических инициатив в Гродненской области. Особое внимание уделяется поддержке инвестиционных проектов и развитию малого и среднего бизнеса в регионе.</p>
+                <p data-lang-key="news_33_text_by" style="display:none">Банк распрацоўкі Рэспублікі Беларусь павялічвае аб'ёмы фінансавага падтрымкі эканамічных ініцыятываў у Гродзенскай вобласці. Асаблівае значэнне надаецца падтрымцы інвестыцыйных праектаў і распрацоўцы малых і сярэдніх бізнесаў у рэгіёне.</p>
+                <img src="img-news/news-33.jpg" alt="Фото новости 33" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_35_title">Стратегию долгосрочного развития до 2030 года разработают в СЭЗ "Брест"</h3>
+                <h3 data-lang-key="news_35_title_by" style="display:none">Стратагію даўгатэрмічнага распрацоўкі да 2030 года распрацуюць у СЭЗ "Брест"</h3>
+                <p class="news-date" data-lang-key="news_35_date_label">Дата: <span data-lang-key="news_35_date_value">14.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_35_date_label_by" style="display:none">Дата: <span data-lang-key="news_35_date_value_by">14.07.2025</span></p>
+                <p data-lang-key="news_35_text">В специальной экономической зоне "Брест" началась работа по разработке стратегии долгосрочного развития до 2030 года. Документ определит ключевые направления роста, инвестиционные приоритеты и меры по повышению конкурентоспособности региона.</p>
+                <p data-lang-key="news_35_text_by" style="display:none">У спецыяльнай эканамічнай зоны "Брест" пачалася работа па распрацоўцы стратагіі даўгатэрмічнага распрацоўкі да 2030 года. Дакумент вызначыць ключавыя напрамкі росту, інвестыцыйныя прыярытэты і меры па павышэнні канкурентнасці рэгіёну.</p>
+                <img src="img-news/news-35.jpg" alt="Фото новости 35" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_37_title">МАРТ проверил рынки: какие нарушения обнаружены</h3>
+                <h3 data-lang-key="news_37_title_by" style="display:none">МАРТ праверыў рынкі: якія нарышэнні выявіліся</h3>
+                <p class="news-date" data-lang-key="news_37_date_label">Дата: <span data-lang-key="news_37_date_value">14.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_37_date_label_by" style="display:none">Дата: <span data-lang-key="news_37_date_value_by">14.07.2025</span></p>
+                <p data-lang-key="news_37_text">Министерство антимонопольного регулирования и торговли провело проверки рынков и выявило ряд нарушений, связанных с ценообразованием и качеством товаров. По итогам проверок приняты меры по устранению нарушений и усилению контроля за деятельностью торговых объектов.</p>
+                <p data-lang-key="news_37_text_by" style="display:none">Міністэрства антыманопольнага рэгулявання і тэрмыцы провела праверкі рынкаў і выявіла рад нарышэнняў, звязаных з цэнавараваннем і якасцю прадуктаў. Па выніках праверкаў прынятыя меры па ўзняцці нарышэнняў і павялічэнню кантролю за дзейнасцю тэрмычных аб'ектаў.</p>
+                <img src="img-news/news-37.jpg" alt="Фото новости 37" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_38_title">Железнодорожный терминал в "Великом камне" планируют ввести в эксплуатацию в середине 2026 года</h3>
+                <h3 data-lang-key="news_38_title_by" style="display:none">Железнодорожный терминал в "Великом камне" планируют ввести в эксплуатацию в середине 2026 года</h3>
+                <p class="news-date" data-lang-key="news_38_date_label">Дата: <span data-lang-key="news_38_date_value">13.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_38_date_label_by" style="display:none">Дата: <span data-lang-key="news_38_date_value_by">13.07.2025</span></p>
+                <p data-lang-key="news_38_text">В индустриальном парке "Великий камень" к середине 2026 года планируется ввести в эксплуатацию новый железнодорожный терминал. Проект позволит увеличить объёмы грузоперевозок и повысить логистическую привлекательность парка.</p>
+                <p data-lang-key="news_38_text_by" style="display:none">У індустрыяльным парку "Вялікі камень" у сердзіне 2026 года плануецца ўвесці ў эксплуатацыю новы жэлезнадоржны тэрмінал. Праект дазволіць павялічыць аб'ёмы грузаперавозок і павысіць лагістычную прываблівасць парку.</p>
+                <img src="img-news/news-38.jpg" alt="Фото новости 38" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_40_title">Доллар и юань подорожали, российский рубль подешевел в цене на торгах 12 июля</h3>
+                <h3 data-lang-key="news_40_title_by" style="display:none">Доллар і юань падорожалі, російскі рубель падешеў у кошце на тэрмінах 12 ліпеня</h3>
+                <p class="news-date" data-lang-key="news_40_date_label">Дата: <span data-lang-key="news_40_date_value">12.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_40_date_label_by" style="display:none">Дата: <span data-lang-key="news_40_date_value_by">20.07.2025</span></p>
+                <p data-lang-key="news_40_text">На торгах 12 июля доллар и юань подорожали, а российский рубль снизился в цене. Изменения курсов валют отражают текущие тенденции на финансовых рынках и внешнеэкономические факторы.</p>
+                <p data-lang-key="news_40_text_by" style="display:none">На тэрмінах 12 ліпеня доллар і юань падорожалі, а російскі рубель падзяліўся ў кошце. Змены курсаў валют адлюстроўваюць бягучыя тэндэнцыі на фінансавых рынках і вонкава-эканамічныя фактары.</p>
+                <img src="img-news/news-40.jpg" alt="Фото новости 40" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_41_title">Беларусь планирует более тесно сотрудничать с Сербией в области биржевой торговли</h3>
+                <h3 data-lang-key="news_41_title_by" style="display:none">Беларусь плануе больш тэсна сяродняцца з Сербіяй ў абласці біржавай тэрмы</h3>
+                <p class="news-date" data-lang-key="news_41_date_label">Дата: <span data-lang-key="news_41_date_value">12.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_41_date_label_by" style="display:none">Дата: <span data-lang-key="news_41_date_value_by">12.07.2025</span></p>
+                <p data-lang-key="news_41_text">Беларусь и Сербия обсуждают возможности расширения сотрудничества в сфере биржевой торговли. Планируется внедрение новых торговых инструментов и обмен опытом между биржами двух стран.</p>
+                <p data-lang-key="news_41_text_by" style="display:none">Беларусь і Сербія абмяркоўваюць магчымасці пашырэння сяродняцтва ў абласці біржавай тэрмы. Плануецца ўвадзенне новых тэрмычных інструментаў і абмен апытам паміж біржамі двух краін.</p>
+                <img src="img-news/news-41.jpg" alt="Фото новости 41" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_42_title">Хлебопечение, производство мяса птицы: Банк развития поддержал инвестпроекты Витебской области</h3>
+                <h3 data-lang-key="news_42_title_by" style="display:none">Хлебопечение, производство мяса птицы: Банк развития поддержал инвестпроекты Витебской области</h3>
+                <p class="news-date" data-lang-key="news_42_date_label">Дата: <span data-lang-key="news_42_date_value">12.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_42_date_label_by" style="display:none">Дата: <span data-lang-key="news_42_date_value_by">12.07.2025</span></p>
+                <p data-lang-key="news_42_text">Банк развития Республики Беларусь оказал финансовую поддержку инвестиционным проектам в Витебской области, направленным на развитие хлебопечения и производства мяса птицы. Реализация проектов позволит создать новые рабочие места и повысить продовольственную безопасность региона.</p>
+                <p data-lang-key="news_42_text_by" style="display:none">Банк распрацоўкі Рэспублікі Беларусь аказаў фінансавую падтрымку інвестыцыйным праектам у Віцебскай вобласці, накіраваным на распрацоўку хлебапечэння і вытворчасці мяса птушкі. Рэалізацыя праектаў дазволіць ствараць новыя рабочыя месцы і павысіць прадоўжальную бяспеку рэгіёну.</p>
+                <img src="img-news/news-42.jpg" alt="Фото новости 42" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_43_title">Госстандарт актуализирует пять стандартов в области обеспечения доступной среды</h3>
+                <h3 data-lang-key="news_43_title_by" style="display:none">Госстандарт актуализирует пять стандартов в области обеспечения доступной среды</h3>
+                <p class="news-date" data-lang-key="news_43_date_label">Дата: <span data-lang-key="news_43_date_value">11.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_43_date_label_by" style="display:none">Дата: <span data-lang-key="news_43_date_value_by">11.07.2025</span></p>
+                <p data-lang-key="news_43_text">Госстандарт Беларуси приступил к актуализации пяти национальных стандартов, направленных на обеспечение доступной среды для людей с инвалидностью. Новые требования позволят повысить уровень инклюзивности городской инфраструктуры.</p>
+                <p data-lang-key="news_43_text_by" style="display:none">Госстандарт Беларуси прыступіў да актуалізацыі пяці нацыянальных стандартаў, накіраваных на забеспячэнне даступнай сярэды для людзей з інваліднасцю. Новыя трэбаванні дазволіць павысіць ўзровень інклюзіўнасці горадскай інфраструктуры.</p>
+                <img src="img-news/news-43.jpg" alt="Фото новости 43" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            <article class="news-item animate-on-scroll">
+                <h3 data-lang-key="news_44_title">БУТБ из-за урагана введет дополнительные торги лесозаготовительными услугами</h3>
+                <h3 data-lang-key="news_44_title_by" style="display:none">БУТБ з-за урагана ўведзе додатковыя тэрміны для торгаў лесозаготовільнымі паслугамі</h3>
+                <p class="news-date" data-lang-key="news_44_date_label">Дата: <span data-lang-key="news_44_date_value">11.07.2025</span></p>
+                <p class="news-date" data-lang-key="news_44_date_label_by" style="display:none">Дата: <span data-lang-key="news_44_date_value_by">11.07.2025</span></p>
+                <p data-lang-key="news_44_text">В связи с последствиями урагана Белорусская универсальная товарная биржа организует дополнительные торги по лесозаготовительным услугам. Это позволит оперативно восстановить объёмы заготовки древесины и обеспечить потребности рынка.</p>
+                <p data-lang-key="news_44_text_by" style="display:none">У звязку з паслядоўнасцю наступстваў урагану Беларуская ўніверсальная тэрмічная біржа ўрагуваць додатковыя тэрміны для торгаў лесозаготовільнымі паслугамі. Гэта дазволіць аперацыйна аднавіць аб'ёмы загадвання дрэвасіны і забяспечыць патрэбы рынку.</p>
+                <img src="img-news/news-44.jpg" alt="Фото новости 44" class="news-img" style="max-width:220px;max-height:140px;margin:8px 0;border-radius:8px;">
+            </article>
+            
+           
+            
+            
+            
+          
+            
+            
+        </div>
+        <div style="display: flex; justify-content: center; margin: 2rem 0;">
+    <button id="show-more-news" style="padding: 0.7rem 2rem; font-size: 1.1rem; border-radius: 8px; background: #e2e2e2; border: none; cursor: pointer;">Показать ещё</button>
+</div>
+<div id="news-img-modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
+  <img id="news-img-modal-img" src="" alt="Фото новости" style="max-width:90vw; max-height:90vh; border-radius:12px; box-shadow:0 0 24px #000;">
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="ornament-bar"></div>
+            <p data-lang-key="footer_copyright">Беларусь 2025: Благоустройство.</p>
+            <p data-lang-key="footer_developed_by">Разработано с ❤️ для Беларуси</p>
+            <div class="ornament-bar"></div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/news-enhancements.js"></script>
+    <script>
+// Пагинация новостей
+const NEWS_PER_PAGE = 10;
+let currentPage = 1;
+const newsContainer = document.getElementById('news-container');
+const newsItems = Array.from(newsContainer.querySelectorAll('.news-item'));
+const showMoreBtn = document.getElementById('show-more-news');
+
+function showNewsPage(page) {
+  newsItems.forEach((item, idx) => {
+    if (idx < page * NEWS_PER_PAGE) {
+      item.style.display = '';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+  if (page * NEWS_PER_PAGE >= newsItems.length) {
+    showMoreBtn.style.display = 'none';
+  } else {
+    showMoreBtn.style.display = '';
+  }
+}
+showNewsPage(currentPage);
+showMoreBtn.addEventListener('click', () => {
+  currentPage++;
+  showNewsPage(currentPage);
+});
+
+// Увеличение фото в новостях
+const modal = document.getElementById('news-img-modal');
+const modalImg = document.getElementById('news-img-modal-img');
+document.querySelectorAll('.news-img').forEach(img => {
+  img.style.cursor = 'zoom-in';
+  img.addEventListener('click', function() {
+    modal.style.display = 'flex';
+    modalImg.src = this.src;
+    modalImg.alt = this.alt;
+  });
+});
+modal.addEventListener('click', function(e) {
+  if (e.target === modal || e.target === modalImg) {
+    modal.style.display = 'none';
+    modalImg.src = '';
+  }
+});
+</script>
+<script src="js/auth-simple.js"></script>
+<script src="js/header.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="site_title_gallery">Галерея - Беларусь 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../god-blagoustroistva2025-04.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+    <header class="header-full-nav header-adaptive">
+        <div class="container">
+                        <div class="logo" data-lang-key="logo_text">Беларусь 2025: Благоустройство</div>
+            <label class="burger" for="burger">
+                <input type="checkbox" id="burger" />
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html" data-lang-key="nav_main">Главная</a></li>
+                    <li><a href="about.html" data-lang-key="nav_about">О программе</a></li>
+                    <li><a href="projects.html" data-lang-key="nav_projects">Проекты</a></li>
+                    <li><a href="news.html" data-lang-key="nav_news">Новости</a></li>
+                    <li><a href="gallery.html" class="active" data-lang-key="nav_gallery">Галерея</a></li>
+                    <li><a href="awards.html" data-lang-key="nav_awards">Достижения</a></li>
+                                         <li><a href="liberation80.html" data-lang-key="nav_liberation80">80 лет освобождения</a></li> 
+                </ul>
+            </nav>
+            <div class="lang-switcher">
+                <button id="lang-ru" class="lang-btn active" data-lang="ru">RU</button>
+                <button id="lang-by" class="lang-btn" data-lang="by">BY</button>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">
+                    <span class="theme-toggle-slider"></span>
+                </button>
+                <button id="mobile-theme-btn" class="mobile-theme-btn" aria-label="Переключить тему">☀️</button>
+            </div>
+            <div class="auth-buttons">
+                <button id="login-btn">Вход</button>
+                <button id="register-btn">Регистрация</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container page-content animate-on-scroll">
+            <!-- <div style="display: flex; justify-content: flex-end; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                <button id="add-photo-btn" class="add-news-btn"><span class="add-icon">+</span>Добавить фото</button>
+            </div> -->
+            <h1 data-lang-key="gallery_page_title">Галерея</h1>
+        </div>
+        <div class="news-list-container"></div>
+        <div class="container page-content animate-on-scroll">
+            <div class="gallery-intro-block animate-on-scroll">
+              <h2 id="gallery-intro-title" data-lang-key="gallery_intro_title">Галерея Беларуси</h2>
+              <p id="gallery-intro-desc" data-lang-key="gallery_intro_desc">Здесь собраны самые яркие моменты  Беларуси.</p>
+            </div>
+            <div class="gallery-grid">
+                
+                <div class="flip-card animate-on-scroll">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img-gallery/gallery-1.webp" alt="Фото 1" class="zoomable-project-img">
+                        </div>
+                        <div class="flip-card-back">
+                            <p data-lang-key="gallery_card_1">Сотрудник МЧС во время ликвидации последствий стихии в Могилеве<br>ФОТО Виталия Пивоварчика</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card animate-on-scroll">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img-gallery/gallery-2.webp" alt="Фото 2" class="zoomable-project-img">
+                        </div>
+                        <div class="flip-card-back">
+                            <p data-lang-key="gallery_card_2">аисты<br>ФОТО Леонида Щеглова</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card animate-on-scroll">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img-gallery/gallery-3.webp" alt="Фото 3" class="zoomable-project-img">
+                        </div>
+                        <div class="flip-card-back">
+                            <p data-lang-key="gallery_card_3">Сильный дождь в Минске<br>ФОТО Виталия Пивоварчика</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card animate-on-scroll">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img-gallery/gallery-4.webp" alt="Фото 4" class="zoomable-project-img">
+                        </div>
+                        <div class="flip-card-back">
+                            <p data-lang-key="gallery_card_4">Закат в Нижнем Новгороде<br>ФОТО Татьяны Матусевич</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card animate-on-scroll">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img-gallery/gallery-5.webp" alt="Фото 5" class="zoomable-project-img">
+                        </div>
+                        <div class="flip-card-back">
+                            <p data-lang-key="gallery_card_5">во время подведения итогов конкурса "Лучшая скамейка - 2025"<br>ФОТО Сергея Шелега</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card animate-on-scroll">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img-gallery/gallery-6.webp" alt="Фото 6" class="zoomable-project-img">
+                        </div>
+                        <div class="flip-card-back">
+                            <p data-lang-key="gallery_card_6">розы<br>ФОТО Леонида Щеглова</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card animate-on-scroll">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img-gallery/gallery-7.webp" alt="Фото 7" class="zoomable-project-img">
+                        </div>
+                        <div class="flip-card-back">
+                            <p data-lang-key="gallery_card_7">Сергей Лазарев выступил на "Славянском базаре" в Витебске<br>ФОТО Александра Хитрова</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card animate-on-scroll">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img-gallery/gallery-8.webp" alt="Фото 8" class="zoomable-project-img">
+                        </div>
+                        <div class="flip-card-back">
+                            <p data-lang-key="gallery_card_8">фестиваль исторической реконструкции "Легендарные эпохи"<br>ФОТО Леонида Щеглова</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card animate-on-scroll">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img-gallery/gallery-9.webp" alt="Фото 9" class="zoomable-project-img">
+                        </div>
+                        <div class="flip-card-back">
+                            <p data-lang-key="gallery_card_9">Во время жатвы в Клецком районе<br>ФОТО Сергея Шелега</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card animate-on-scroll">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img-gallery/gallery-10.webp" alt="Фото 10" class="zoomable-project-img">
+                        </div>
+                        <div class="flip-card-back">
+                            <p data-lang-key="gallery_card_10">Ольга Бузова на церемонии закрытия XXXIV Международного фестиваля искусств "Славянский базар в Витебске"</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card animate-on-scroll">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img-gallery/gallery-11.webp" alt="Фото 11" class="zoomable-project-img">
+                        </div>
+                        <div class="flip-card-back">
+                            <p data-lang-key="gallery_card_11">река в Мозырском районе<br>ФОТО Сергея Холодилина</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card animate-on-scroll">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img-gallery/gallery-12.webp" alt="Фото 12" class="zoomable-project-img">
+                        </div>
+                        <div class="flip-card-back">
+                            <p data-lang-key="gallery_card_12">во время фестиваля "Джип-фест 2025" в Брестском районе<br>ФОТО Виолетты Южаковой</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card animate-on-scroll">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img-gallery/gallery-13.webp" alt="Фото 13" class="zoomable-project-img">
+                        </div>
+                        <div class="flip-card-back">
+                            <p data-lang-key="gallery_card_13">лЁн-долгунец<br>ФОТО Леонида Щеглова</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card animate-on-scroll">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img-gallery/gallery-14.webp" alt="Фото 14" class="zoomable-project-img">
+                        </div>
+                        <div class="flip-card-back">
+                            <p data-lang-key="gallery_card_14">Скульптура льва в Витебске<br>ФОТО Александра Хитрова</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card animate-on-scroll">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img-gallery/gallery-15.webp" alt="Фото 15" class="zoomable-project-img">
+                        </div>
+                        <div class="flip-card-back">
+                            <p data-lang-key="gallery_card_15">Грозовое небо<br>ФОТО Леонида Щеглова</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card animate-on-scroll">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img-gallery/gallery-16.webp" alt="Фото 16" class="zoomable-project-img">
+                        </div>
+                        <div class="flip-card-back">
+                            <p data-lang-key="gallery_card_16">Во время уборки льна в Лидском районе</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card animate-on-scroll">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img-gallery/gallery-17.jpg" alt="Фото 17" class="zoomable-project-img">
+                        </div>
+                        <div class="flip-card-back">
+                            <p data-lang-key="gallery_card_17">В центре исторического блока событий окажется масштабная реконструкция эпизодов Грюнвальдской битвы.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="ornament-bar"></div>
+            <p data-lang-key="footer_copyright">Беларусь 2025: Благоустройство.</p>
+            <p data-lang-key="footer_developed_by">Разработано с ❤️ для Беларуси</p>
+            <div class="ornament-bar"></div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/header.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof createAuthModals === 'function') createAuthModals();
+        if (typeof updateAuthUI === 'function') updateAuthUI();
+    });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="site_title_about">О программе - Беларусь 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../god-blagoustroistva2025-04.ico" type="image/x-icon">
+    <style>
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .about-section {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .tech-list li {
+            opacity: 0;
+            transform: translateX(-20px);
+            animation: slideIn 0.5s ease-out forwards;
+        }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(0,164,80,0.3); }
+            50% { box-shadow: 0 0 40px rgba(0,164,80,0.6), 0 0 60px rgba(0,164,80,0.4); }
+        }
+        
+        
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            position: relative;
+        }
+        
+        
+        .about-content::before {
+            content: '';
+            position: absolute;
+            top: 10%;
+            right: 5%;
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(45deg, rgba(0,164,80,0.1), rgba(217,47,33,0.1));
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+            z-index: -1;
+        }
+        
+        .about-content::after {
+            content: '';
+            position: absolute;
+            bottom: 20%;
+            left: 3%;
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, rgba(217,47,33,0.1), rgba(0,164,80,0.1));
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            animation: pulse 4s ease-in-out infinite;
+            z-index: -1;
+        }
+        
+        
+        .main-title {
+            text-align: center;
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, #00A450 0%, #D92F21 50%, #00A450 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 3s ease-in-out infinite;
+            position: relative;
+        }
+        
+        .main-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #00A450, #D92F21);
+            border-radius: 2px;
+            animation: glow 2s ease-in-out infinite;
+        }
+        
+        
+        .about-section {
+            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,255,248,0.9) 100%);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 
+                0 20px 40px rgba(0,164,80,0.1),
+                0 0 0 1px rgba(0,164,80,0.1);
+            border-left: 6px solid transparent;
+            border-image: linear-gradient(45deg, #00A450, #D92F21) 1;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out;
+            transition: all 0.3s ease;
+        }
+        
+        .about-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 
+                0 30px 60px rgba(0,164,80,0.15),
+                0 0 0 1px rgba(0,164,80,0.2);
+        }
+        
+        .about-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0,164,80,0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .about-section:hover::before {
+            left: 100%;
+        }
+        
+        
+        .about-section h2 {
+            color: #006837;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .about-section h2::before {
+            content: attr(data-icon);
+            position: absolute;
+            left: -50px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2.5rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        .about-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #00A450, #D92F21);
+            border-radius: 2px;
+            transition: width 0.5s ease;
+        }
+        
+        .about-section:hover h2::after {
+            width: 100%;
+        }
+        
+        
+        .about-section p {
+            color: #333;
+            line-height: 1.8;
+            font-size: 1.15rem;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+        
+        .about-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .about-section li {
+            position: relative;
+            padding: 0.8rem 0 0.8rem 3rem;
+            margin-bottom: 1rem;
+            background: rgba(0,164,80,0.05);
+            border-radius: 15px;
+            border-left: 4px solid #00A450;
+            transition: all 0.3s ease;
+        }
+        
+        .about-section li:hover {
+            background: rgba(0,164,80,0.1);
+            transform: translateX(10px);
+            border-left-color: #D92F21;
+        }
+        
+        .about-section li::before {
+            content: '✨';
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.2rem;
+            
+        }
+        
+        .about-section li strong {
+            color: #00A450;
+            font-weight: 700;
+        }
+        
+        
+        .about-section:nth-child(2) h2::before { content: '🎯'; }
+        .about-section:nth-child(3) h2::before { content: '⚡'; }
+        .about-section:nth-child(4) h2::before { content: '🌐'; }
+        .about-section:nth-child(5) h2::before { content: '💻'; }
+        
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .info-card {
+            background: linear-gradient(135deg, #f8fffe 0%, #e8f5e8 100%);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+        }
+        
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #00A450, #D92F21, #00A450);
+            background-size: 200% 200%;
+            border-radius: 22px;
+            z-index: -1;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,164,80,0.2);
+        }
+        
+        .info-card h3 {
+            color: #006837;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .info-card h3::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 2px;
+            background: #00A450;
+            border-radius: 1px;
+        }
+        
+        .info-card p {
+            color: #666;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        
+        [data-theme="dark"] .about-section {
+            background: linear-gradient(135deg, rgba(30,30,30,0.9) 0%, rgba(20,40,20,0.9) 100%);
+            color: var(--text-light);
+            border-image: linear-gradient(45deg, var(--primary-green), var(--primary-red)) 1;
+        }
+        
+        [data-theme="dark"] .about-section h2 {
+            color: var(--primary-green);
+        }
+        
+        [data-theme="dark"] .about-section p,
+        [data-theme="dark"] .about-section li {
+            color: var(--text-light);
+        }
+        
+        [data-theme="dark"] .about-section li {
+            background: rgba(0,164,80,0.1);
+            border-left-color: var(--primary-green);
+        }
+        
+        [data-theme="dark"] .about-section li:hover {
+            background: rgba(0,164,80,0.2);
+            border-left-color: var(--primary-red);
+        }
+        
+        [data-theme="dark"] .info-card {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(0,40,20,0.3) 100%);
+        }
+        
+        [data-theme="dark"] .info-card h3 {
+            color: var(--primary-green);
+        }
+        
+        [data-theme="dark"] .info-card p {
+            color: var(--text-secondary);
+        }
+        
+        [data-theme="dark"] .main-title {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-red) 50%, var(--primary-green) 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5rem;
+            }
+            
+            .about-section {
+                padding: 2rem;
+                margin-bottom: 2rem;
+            }
+            
+            .about-section h2 {
+                font-size: 1.8rem;
+            }
+            
+            .about-section h2::before {
+                left: -35px;
+                font-size: 2rem;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header-full-nav  header-adaptive">
+        <div class="container">
+                        <div class="logo" data-lang-key="logo_text">Беларусь 2025: Благоустройство</div>
+            <label class="burger" for="burger">
+                <input type="checkbox" id="burger" />
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html" data-lang-key="nav_main">Главная</a></li>
+                    <li><a href="about.html" class="active" data-lang-key="nav_about">О программе</a></li>
+                    <li><a href="projects.html" data-lang-key="nav_projects">Проекты</a></li>
+                    <li><a href="news.html" data-lang-key="nav_news">Новости</a></li>
+                    <li><a href="gallery.html" data-lang-key="nav_gallery">Галерея</a></li>
+                    <li><a href="awards.html" data-lang-key="nav_awards">Достижения</a></li>
+                   <li><a href="liberation80.html" data-lang-key="nav_liberation80">80 лет освобождения</a></li>
+                </ul>
+            </nav>
+            <div class="lang-switcher">
+                <button id="lang-ru" class="lang-btn active" data-lang="ru">RU</button>
+                <button id="lang-by" class="lang-btn" data-lang="by">BY</button>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">
+                    <span class="theme-toggle-slider"></span>
+                </button>
+                <button id="mobile-theme-btn" class="mobile-theme-btn" aria-label="Переключить тему">☀️</button>
+            </div>
+            <div class="auth-buttons">
+                <button id="login-btn">Вход</button>
+                <button id="register-btn">Регистрация</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div style="display:none"><button id="add-news-btn" class="add-news-btn"></button></div>
+        <div class="news-list-container" style="display:none"></div>
+        
+        <div class="container">
+            <div class="about-content">
+                <h1 class="main-title" data-lang-key="about_main_title">О проекте "Беларусь 2025: Благоустройство"</h1>
+                
+                <div class="about-section">
+                    <h2 data-lang-key="about_project_info_title">Информация о проекте</h2>
+                    <p data-lang-key="about_project_description">Проект <span class="highlight">"Беларусь 2025: Благоустройство"</span>. Это веб-платформа, посвящённая развитию и благоустройству Беларуси, где собрана актуальная информация о проектах, новостях, достижениях и планах на будущее.</p>
+                    
+                    
+                </div>
+                
+                <div class="about-section">
+                    <h2 data-lang-key="about_purpose_title" data-icon="🎯">Цель проекта</h2>
+                    <p data-lang-key="about_purpose_description">Главная цель проекта — создать информационную платформу, которая будет освещать достижения Беларуси в области благоустройства и развития. Сайт предназначен для:</p>
+                    <ul>
+                        <li data-lang-key="about_purpose_1">Информирования  о текущих проектах и инициативах</li>
+                        <li data-lang-key="about_purpose_2">Демонстрации успехов и достижений страны</li>
+                        <li data-lang-key="about_purpose_5">Обеспечения удобного доступа к информации с любых устройств</li>
+                    </ul>
+                </div>
+                
+                <div class="about-section">
+                    <h2 data-lang-key="about_features_title" data-icon="⚡">Особенности платформы</h2>
+                    <p data-lang-key="about_features_description">Сайт разработан с учётом современных требований к веб-платформам:</p>
+                    <ul>
+                        <li data-lang-key="about_feature_1"><strong>Простота и понятность</strong> — интуитивно понятный интерфейс</li>
+                        <li data-lang-key="about_feature_2"><strong>Современный дизайн</strong> — актуальные тренды веб-дизайна</li>
+                        <li data-lang-key="about_feature_3"><strong>Адаптивность</strong> — корректное отображение на всех устройствах</li>
+                        <li data-lang-key="about_feature_4"><strong>Двуязычность</strong> — поддержка русского и белорусского языков</li>
+                        <li data-lang-key="about_feature_5"><strong>Тёмная тема</strong> — возможность переключения между светлой и тёмной темами</li>
+                        <li data-lang-key="about_feature_6"><strong>Интерактивность</strong> — динамические элементы без излишней сложности</li>
+                    </ul>
+                </div>
+                
+                <div class="about-section">
+                    <h2 data-lang-key="about_sections_title" data-icon="🌐">Разделы сайта</h2>
+                    <p data-lang-key="about_sections_description">Платформа включает в себя несколько ключевых разделов:</p>
+                    <ul>
+                        <li data-lang-key="about_section_main"><strong>Главная</strong> — обзор основных направлений и новостей</li>
+                        <li data-lang-key="about_section_about"><strong>О программе</strong> — подробная информация о проекте</li>
+                        <li data-lang-key="about_section_projects"><strong>Проекты</strong> — описание текущих и планируемых инициатив</li>
+                        <li data-lang-key="about_section_news"><strong>Новости</strong> — актуальные события и обновления</li>
+                        <li data-lang-key="about_section_gallery"><strong>Галерея</strong> — фотоотчёты и визуальные материалы</li>
+                        <li data-lang-key="about_section_awards"><strong>Достижения</strong> — успехи и награды</li>
+                        <li data-lang-key="about_section_liberation80"><strong>80 лет Победы</strong> — историческая память и памятные события освобождения Беларуси</li>
+                        <li data-lang-key="about_section_infographics"><strong>Инфографика</strong> — данные в наглядном формате</li>
+                    </ul>
+                </div>
+                
+                <div class="about-section">
+                    <h2 data-lang-key="about_technology_title" data-icon="💻">Технические особенности</h2>
+                    <p data-lang-key="about_technology_description">Проект создан с использованием современных веб-технологий:</p>
+                    <ul>
+                        <li data-lang-key="about_tech_1">HTML5, CSS3, JavaScript — основа платформы</li>
+                        <li data-lang-key="about_tech_2">Адаптивная вёрстка для всех типов устройств</li>
+                        <li data-lang-key="about_tech_4">Система переключения языков</li>
+                        <li data-lang-key="about_tech_6">Оптимизация для быстрой загрузки</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+<footer>
+        <div class="container">
+            <div class="ornament-bar"></div>
+            <p data-lang-key="footer_copyright">Беларусь 2025: Благоустройство.</p>
+            <p data-lang-key="footer_developed_by">Разработано с ❤️ для Беларуси</p>
+            <div class="ornament-bar"></div>
+        </div>
+ </footer>
+    <script src="script.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/auth-simple.js"></script>
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/header.js"></script>
+</body>
+</html>
+
+
