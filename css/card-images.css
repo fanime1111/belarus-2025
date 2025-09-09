@@ -1,0 +1,34 @@
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Remove all hover effects */
+.card-image:hover {
+    transform: none !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Specific adjustments for different sections */
+.news-preview .card-image {
+    border-radius: 12px;
+}
+
+.gallery-preview .card-image {
+    border-radius: 4px;
+}
+
+.awards-preview .card-image {
+    border: 4px solid #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}

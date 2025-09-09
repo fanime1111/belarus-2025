@@ -1,0 +1,55 @@
+﻿
+.animate-on-scroll { 
+    opacity:0; 
+    transform:translateY(30px); 
+    transition:opacity .6s ease-out,transform .6s ease-out 
+}
+.animate-on-scroll.is-visible { 
+    opacity:1; 
+    transform:translateY(0) 
+}
+
+
+.animate-on-scroll.animation-default {
+    transform:translateY(30px); 
+}
+.animate-on-scroll.animation-default.is-visible {
+    opacity:1; 
+    transform:translateY(0);
+}
+
+
+.animate-on-scroll.animation-fade-in-only {
+    
+}
+.animate-on-scroll.animation-fade-in-only.is-visible {
+    opacity: 1;
+}
+
+
+.animate-on-scroll.animation-slide-in-left {
+    transform: translateX(-50px);
+}
+.animate-on-scroll.animation-slide-in-left.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.animate-on-scroll.animation-slide-in-right {
+    transform: translateX(50px);
+}
+.animate-on-scroll.animation-slide-in-right.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.animate-on-scroll.animation-scale-up {
+    transform: scale(0.8);
+}
+.animate-on-scroll.animation-scale-up.is-visible {
+    opacity: 1;
+    transform: scale(1);
+} 
+

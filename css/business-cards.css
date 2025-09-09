@@ -1,0 +1,571 @@
+/* Business Cards Styles */
+
+/* About Preview Section */
+.about-preview {
+    padding: 6rem 0;
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-preview-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-preview-content {
+    padding: 4rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #4a6cf7;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-preview-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.about-preview h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.about-preview h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #4a6cf7 0%, #6c5ce7 100%);
+    border-radius: 2px;
+}
+
+.about-preview p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #475569;
+    margin-bottom: 2.5rem;
+}
+
+.about-preview .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: linear-gradient(90deg, #4a6cf7 0%, #6c5ce7 100%);
+    color: white;
+    padding: 0.9rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(74, 108, 247, 0.2);
+}
+
+.about-preview .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 108, 247, 0.3);
+}
+
+.about-preview .btn svg {
+    transition: transform 0.3s ease;
+}
+
+.about-preview .btn:hover svg {
+    transform: translateX(4px);
+}
+
+.about-preview-image-content {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.about-preview-image-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+    border-radius: 8px;
+}
+
+.about-preview-image-content:hover img {
+    transform: scale(1.03);
+}
+
+/* Projects Preview Section */
+.projects-preview {
+    padding: 6rem 0;
+    background-color: #f8fafc;
+    position: relative;
+    overflow: hidden;
+}
+
+.projects-preview .about-preview-content {
+    background: #ffffff;
+    border-left: 4px solid #10b981;
+}
+
+.projects-preview .btn-projects {
+    background: linear-gradient(90deg, #10b981 0%, #34d399 100%);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
+}
+
+.projects-preview .btn-projects:hover {
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
+}
+
+/* Liberation 80 Preview Section */
+.liberation80-preview {
+    padding: 6rem 0;
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.liberation80-preview .about-preview-content {
+    border-left: 4px solid #f59e0b;
+}
+
+.liberation80-preview .btn-liberation80 {
+    background: linear-gradient(90deg, #f59e0b 0%, #fbbf24 100%);
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.2);
+}
+
+.liberation80-preview .btn-liberation80:hover {
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.3);
+}
+
+/* Awards Preview Section */
+.awards-preview {
+    padding: 6rem 0;
+    background-color: #f8fafc;
+    position: relative;
+    overflow: hidden;
+}
+
+.awards-preview .about-preview-content {
+    border-left: 4px solid #8b5cf6;
+}
+
+.awards-preview .btn-awards {
+    background: linear-gradient(90deg, #8b5cf6 0%, #a78bfa 100%);
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2);
+}
+
+.awards-preview .btn-awards:hover {
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.3);
+}
+
+/* Quick Links Section */
+.quick-links {
+    padding: 6rem 0;
+    background-color: #f8fafc;
+    position: relative;
+    overflow: hidden;
+}
+
+.quick-links .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.quick-links h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 1.5rem;
+}
+
+.quick-links h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+}
+
+.links-grid {
+display: flex;
+flex-direction: column;
+gap: 1.5rem;
+}
+
+.links-grid-row {
+display: flex;
+gap: 1.5rem;
+justify-content: center;
+}
+
+.links-grid-row.top {
+margin-bottom: 1.5rem;
+}
+
+.quick-link-item {
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 2rem 1.5rem;
+background: #ffffff;
+border-radius: 12px;
+text-decoration: none;
+color: #1e293b;
+transition: all 0.3s ease;
+overflow: hidden;
+min-width: 200px;
+text-align: center;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+border: 1px solid #e2e8f0;
+}
+
+.quick-link-item:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+border-color: #cbd5e1;
+}
+
+.quick-link-icon {
+font-size: 2rem;
+margin-bottom: 1rem;
+transition: transform 0.3s ease;
+z-index: 1;
+}
+
+.quick-link-item:hover .quick-link-icon {
+transform: scale(1.1);
+}
+
+.quick-link-text {
+font-size: 1rem;
+font-weight: 600;
+position: relative;
+z-index: 1;
+}
+
+.fill-background {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+opacity: 0;
+transition: opacity 0.3s ease;
+z-index: 0;
+}
+
+.quick-link-item[data-hover-color="green"]:not(:first-child):hover {
+    background: linear-gradient(135deg, rgba(74, 222, 128, 0.15) 0%, rgba(34, 197, 94, 0.15) 100%);
+}
+
+.quick-link-item[data-hover-color="blue"]:hover {
+    background: linear-gradient(135deg, rgba(96, 165, 250, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%);
+}
+
+.quick-link-item[data-hover-color="orange"]:hover {
+    background: linear-gradient(135deg, rgba(251, 146, 60, 0.15) 0%, rgba(249, 115, 22, 0.15) 100%);
+}
+
+.quick-link-item[data-hover-color="purple"]:hover {
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(147, 51, 234, 0.15) 100%);
+}
+
+.quick-link-item[data-hover-color="darkred"]:hover {
+    background: linear-gradient(135deg, rgba(248, 113, 113, 0.15) 0%, rgba(220, 38, 38, 0.15) 100%);
+}
+
+.quick-link-item[data-hover-color="gold"]:hover {
+background: linear-gradient(135deg, rgba(251, 191, 36, 0.15) 0%, rgba(245, 158, 11, 0.15) 100%);
+}
+
+.quick-link-item[data-hover-color="teal"]:hover {
+background: linear-gradient(135deg, rgba(45, 212, 191, 0.15) 0%, rgba(13, 148, 136, 0.15) 100%);
+}
+
+[data-theme="dark"] .quick-link-item[data-hover-color]:hover {
+    background: #1e293b !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.side-icon {
+position: absolute;
+font-size: 1.2rem;
+opacity: 0;
+transition: all 0.3s ease;
+z-index: 1;
+}
+
+.side-icon-left {
+left: 1rem;
+top: 1rem;
+transform: translateX(-10px);
+}
+
+.side-icon-right {
+right: 1rem;
+bottom: 1rem;
+transform: translateX(10px);
+}
+
+.quick-link-item:hover .side-icon {
+opacity: 0.8;
+transform: translateX(0);
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] .quick-links {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+[data-theme="dark"] .quick-links h2 {
+    color: #f8fafc;
+}
+
+[data-theme="dark"] .quick-link-item {
+    background: #1e293b;
+    border-color: #334155;
+    color: #f8fafc !important;
+    transition: all 0.2s ease;
+}
+
+[data-theme="dark"] .quick-link-text,
+[data-theme="dark"] .quick-link-item {
+    color: #f8fafc !important;
+}
+
+[data-theme="dark"] .quick-link-item:hover {
+    background: #1e293b !important;
+    border-color: #4a5568;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Prevent first card's icon from changing color on hover */
+.quick-link-item:first-child .quick-link-icon {
+transition: none !important;
+}
+
+[data-theme="dark"] .quick-link-item:first-child .quick-link-icon {
+    color: #10b981 !important; /* Green color for the first icon in dark mode */
+    filter: none !important;
+}
+
+/* Prevent hover effect on first card */
+.quick-link-item:first-child:hover {
+transform: none !important;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+[data-theme="dark"] .quick-link-item:first-child:hover {
+background: #0f172a !important;
+border-color: #1e293b !important;
+}
+
+[data-theme="dark"] .about-preview p,
+[data-theme="dark"] .quick-link-text {
+color: #94a3b8;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+.links-grid-row {
+flex-wrap: wrap;
+}
+
+.quick-link-item {
+flex: 1 1 calc(25% - 1.5rem);
+min-width: 0;
+}
+
+.links-grid-row.bottom .quick-link-item {
+flex: 1 1 calc(33.333% - 1.5rem);
+}
+}
+
+@media (max-width: 1024px) {
+.quick-link-item {
+flex: 1 1 calc(50% - 1.5rem);
+}
+
+.links-grid-row.bottom .quick-link-item {
+flex: 1 1 calc(50% - 1.5rem);
+}
+}
+
+@media (max-width: 768px) {
+.quick-link-item {
+flex: 1 1 100%;
+}
+
+.links-grid-row.bottom .quick-link-item {
+flex: 1 1 100%;
+}
+
+.quick-links h2 {
+font-size: 2rem;
+}
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] .about-preview,
+[data-theme="dark"] .liberation80-preview {
+background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+[data-theme="dark"] .projects-preview,
+[data-theme="dark"] .awards-preview,
+[data-theme="dark"] .quick-links {
+background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+[data-theme="dark"] .about-preview-content,
+[data-theme="dark"] .quick-link-item {
+background: #1e293b;
+border-color: #334155;
+}
+
+[data-theme="dark"] .about-preview h2,
+[data-theme="dark"] .quick-links h2 {
+color: #f8fafc;
+}
+
+[data-theme="dark"] .about-preview p,
+[data-theme="dark"] .quick-link-text {
+color: #94a3b8;
+}
+
+[data-theme="dark"] .fill-background {
+background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+}
+
+[data-theme="dark"] .quick-link-item {
+    border-color: #334155;
+}
+
+[data-theme="dark"] .quick-link-item:hover {
+    border-color: #475569;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .about-preview-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .about-preview-content {
+        text-align: center;
+    }
+    
+    .about-preview h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .links-grid-row,
+    .links-grid-row.bottom {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .about-preview,
+    .projects-preview,
+    .liberation80-preview,
+    .awards-preview,
+    .quick-links {
+        padding: 4rem 0;
+    }
+    
+    .about-preview h2,
+    .quick-links h2 {
+        font-size: 2rem;
+    }
+    
+    .links-grid-row,
+    .links-grid-row.bottom {
+        grid-template-columns: 1fr;
+    }
+    
+    .quick-link-item {
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* Дополнительные мобильные адаптации для business-cards */
+@media (max-width: 768px) {
+    .about-preview {
+        padding: 3rem 0;
+    }
+    
+    .about-preview-content {
+        padding: 2rem 1.5rem;
+        text-align: center;
+    }
+    
+    .about-preview h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    .about-preview p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        text-align: justify;
+    }
+    
+    .about-preview .btn {
+        width: 100%;
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+        justify-content: center;
+    }
+    
+    .about-preview-image-content img {
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-preview {
+        padding: 2rem 0;
+    }
+    
+    .about-preview-content {
+        padding: 1.5rem 1rem;
+    }
+    
+    .about-preview h2 {
+        font-size: 1.6rem;
+    }
+    
+    .about-preview p {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .about-preview .btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.85rem;
+    }
+}

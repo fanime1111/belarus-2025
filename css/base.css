@@ -1,0 +1,68 @@
+﻿
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --primary-red: #D92F21;
+    --primary-green: #00A450;
+    --primary-white: #FFFFFF;
+    --text-dark: #333333;
+    --text-light: #FFFFFF;
+    --background-light: #f4f4f4;
+    --accent-color: var(--primary-green);
+    --ornament-color: var(--primary-green);
+    --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    
+    
+    --hover-color-green: var(--primary-green);
+    --hover-color-blue: #3498db;
+    --hover-color-orange: #e67e22;
+    --hover-color-purple: #8e44ad;
+    --hover-color-darkred: #c0392b;
+    --hover-color-teal: #1abc9c;
+    --hover-color-gold: #f1c40f;
+    --hover-color-brown: #8d6e63;
+}
+
+
+[data-theme="dark"] {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2c2c2c;
+    --bg-tertiary: #3d3d3d;
+    --text-primary: #f0f0f0;
+    --text-secondary: #d0d0d0;
+    --text-light: #ffffff;
+    --text-muted: #a0a0a0;
+    --border-color: #444444;
+    --shadow-light: rgba(0, 0, 0, 0.3);
+    --shadow-medium: rgba(0, 0, 0, 0.5);
+    --card-bg: #252525;
+    --header-bg: #1a1a1a;
+    --footer-bg: #151515;
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--primary-white);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+} 
+
