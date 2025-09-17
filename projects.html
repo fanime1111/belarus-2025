@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="site_title_projects">Проекты - Беларусь 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/burger-menu.js"></script>
+
+    <link rel="stylesheet" href="css/projects-enhancements.css">
+    <link rel="stylesheet" href="css/model-window.css">
+    <link rel="icon" href="lwqeqfklednfcedj19ux6p06yfjjwktj-_1_.ico" type="image/x-icon">
+
+    <style>
+        
+        .projects-hero {
+            background: linear-gradient(180deg, #00A450 0%, #006837 70%, var(--background-light) 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 0;
+        }
+        
+        .projects-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="2" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+        }
+        
+        .projects-hero h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .projects-hero p {
+            font-size: 1.3rem;
+            font-weight: 300;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            opacity: 0.95;
+        }
+        
+        .projects-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            padding: 0 1rem;
+        }
+        
+        .stat-card-new {
+            background: white;
+            padding: 2rem 1.5rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+
+        
+        .stat-card-new:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #00A450;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            color: #666;
+            font-weight: 600;
+        }
+        
+        .projects-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .category-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 6px solid #00A450;
+            position: relative;
+        }
+        
+        .category-card:nth-child(2) {
+            border-left-color: #D92F21;
+        }
+        
+        .category-card:nth-child(3) {
+            border-left-color: #3b82f6;
+        }
+        
+        .category-card:nth-child(4) {
+            border-left-color: #f59e0b;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+        
+        .category-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .category-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #006837;
+            margin-bottom: 1rem;
+        }
+        
+        .category-desc {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .category-projects {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .category-projects li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            color: #555;
+            font-size: 0.95rem;
+        }
+        
+        .category-projects li:last-child {
+            border-bottom: none;
+        }
+        
+        .category-projects li::before {
+            content: '✓';
+            color: #00A450;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin: 4rem 0 3rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .timeline-header {
+            text-align: center !important;
+            margin: 2rem 0 3rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #006837;
+            margin-bottom: 1rem;
+            position: relative;
+            text-align: center;
+            width: 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #00A450, #D92F21);
+            border-radius: 2px;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .timeline-wrapper {
+            background: linear-gradient(135deg, #f8fffe 0%, #e8f5e9 100%);
+            padding: 4rem 0;
+            border-radius: 30px;
+            margin: 3rem 0;
+        }
+        
+        
+        [data-theme="dark"] .stat-card-new,
+        [data-theme="dark"] .category-card {
+            background: var(--card-bg);
+            color: var(--text-light);
+        }
+        
+        [data-theme="dark"] .section-title {
+            color: var(--accent-green);
+        }
+        
+        [data-theme="dark"] .category-title {
+            color: var(--accent-green);
+        }
+        
+        [data-theme="dark"] .stat-label,
+        [data-theme="dark"] .category-desc,
+        [data-theme="dark"] .section-subtitle {
+            color: var(--text-muted);
+        }
+        
+        [data-theme="dark"] .category-projects li {
+            color: var(--text-light);
+            border-bottom-color: var(--border-color);
+        }
+        
+        [data-theme="dark"] .timeline-wrapper {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--card-bg) 100%);
+        }
+        
+        @media (max-width: 768px) {
+            .projects-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .projects-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header-full-nav header-adaptive">
+        <div class="container">
+                        <div class="logo" data-lang-key="logo_text">Беларусь 2025: Благоустройство</div>
+            <label class="burger" for="burger">
+                <input type="checkbox" id="burger" />
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html" data-lang-key="nav_main">Главная</a></li>
+                    <li><a href="about.html" data-lang-key="nav_about">О программе</a></li>
+                    <li><a href="projects.html" class="active" data-lang-key="nav_projects">Проекты</a></li>
+                    <li><a href="news.html" data-lang-key="nav_news">Новости</a></li>
+                    <li><a href="gallery.html" data-lang-key="nav_gallery">Галерея</a></li>
+                    <li><a href="awards.html" data-lang-key="nav_awards">Достижения</a></li>
+                                         <li><a href="liberation80.html" data-lang-key="nav_liberation80">80 лет победы</a></li>
+                </ul>
+                <div class="nav-auth-buttons">
+                    <button id="nav-login-btn" data-lang-key="login">Вход</button>
+                    <button id="nav-register-btn" data-lang-key="register">Регистрация</button>
+                </div>
+            </nav>
+            <div class="lang-switcher">
+                <button id="lang-ru" class="lang-btn active" data-lang="ru">RU</button>
+                <button id="lang-by" class="lang-btn" data-lang="by">BY</button>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">
+                    <span class="theme-toggle-slider"></span>
+                </button>
+                <button id="mobile-theme-btn" class="mobile-theme-btn" aria-label="Переключить тему">☀️</button>
+                </div>
+            <div class="auth-buttons">
+                <button id="login-btn">Вход</button>
+                <button id="register-btn">Регистрация</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div style="display:none"><button id="add-news-btn" class="add-news-btn"></button></div>
+        <div class="news-list-container" style="display:none"></div>
+        
+        
+        <section class="projects-hero">
+            <div class="container">
+                <h1 data-lang-key="projects_hero_title">Проекты развития Беларуси 2025</h1>
+                <p data-lang-key="projects_hero_subtitle">Комплексная программа благоустройства и модернизации, направленная на создание комфортной среды для жизни и работы в каждом регионе страны</p>
+            </div>
+        </section>
+        
+        <div class="container">
+            <div class="projects-stats">
+                <div class="stat-card-new">
+                    <span class="stat-number">5800+</span>
+                    <span class="stat-label" data-lang-key="stat_projects_total">Новых рабочих мест</span>
+                </div>
+                <div class="stat-card-new">
+                    <span class="stat-number">1,845млн</span>
+                    <span class="stat-label" data-lang-key="stat_cities_total">ввели кв. м жилья                    </span>
+                </div>
+                <div class="stat-card-new">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label" data-lang-key="stat_satisfaction">Удовлетворенность граждан</span>
+                </div>
+            </div>
+            
+            
+            <div class="section-header">
+                <h2 class="section-title" data-lang-key="projects_categories_title">Основные направления</h2>
+                <p class="section-subtitle" data-lang-key="projects_categories_subtitle">Программа охватывает все ключевые сферы развития современного города и сельских населенных пунктов</p>
+            </div>
+            
+            
+            <div class="projects-categories">
+                <div class="category-card">
+                    <span class="category-icon">🏡</span>
+                    <h3 class="category-title" data-lang-key="category_infrastructure_title">Инфраструктура</h3>
+                    <p class="category-desc" data-lang-key="category_infrastructure_desc">Модернизация дорог, мостов, коммунальных сетей и транспортных узлов</p>
+                    <ul class="category-projects">
+                        <li data-lang-key="infrastructure_1">Реконструкция магистральных дорог</li>
+                        <li data-lang-key="infrastructure_2">Обновление водопроводных систем</li>
+                        <li data-lang-key="infrastructure_3">Строительство новых мостов</li>
+                        <li data-lang-key="infrastructure_4">Модернизация электросетей</li>
+                    </ul>
+                </div>
+                
+                <div class="category-card">
+                    <span class="category-icon">🌳</span>
+                    <h3 class="category-title" data-lang-key="category_environment_title">Экология и озеленение</h3>
+                    <p class="category-desc" data-lang-key="category_environment_desc">Создание парков, скверов, зеленых зон и экологических проектов</p>
+                    <ul class="category-projects">
+                        <li data-lang-key="environment_1">Обустройство новых парков</li>
+                        <li data-lang-key="environment_2">Посадка деревьев в городах</li>
+                        <li data-lang-key="environment_3">Создание экотроп</li>
+                        <li data-lang-key="environment_4">Очистка водоемов</li>
+                    </ul>
+                </div>
+                
+                <div class="category-card">
+                    <span class="category-icon">🏢</span>
+                    <h3 class="category-title" data-lang-key="category_social_title">Социальная сфера</h3>
+                    <p class="category-desc" data-lang-key="category_social_desc">Развитие образования, здравоохранения, культуры и спорта</p>
+                    <ul class="category-projects">
+                        <li data-lang-key="social_1">Строительство школ и детсадов</li>
+                        <li data-lang-key="social_2">Модернизация больниц</li>
+                        <li data-lang-key="social_3">Культурные центры</li>
+                        <li data-lang-key="social_4">Спортивные комплексы</li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+            <div style="display: flex; justify-content: center; margin-top: 2rem;">
+                <div class="category-card" style="max-width: 400px; width: 100%;">
+                    <span class="category-icon">📱</span>
+                    <h3 class="category-title" data-lang-key="category_digital_title">Цифровизация</h3>
+                    <p class="category-desc" data-lang-key="category_digital_desc">Внедрение современных технологий и цифровых решений</p>
+                    <ul class="category-projects">
+                        <li data-lang-key="digital_1">Умное освещение улиц</li>
+                        <li data-lang-key="digital_2">Электронные госуслуги</li>
+                        <li data-lang-key="digital_3">Бесплатный Wi-Fi</li>
+                        <li data-lang-key="digital_4">Цифровые остановки</li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+            <div class="timeline-wrapper">
+                <div class="timeline-header">
+                    <h2 class="section-title" data-lang-key="timeline_title">Ключевые вехи 2025 года</h2>
+                    <p class="section-subtitle" data-lang-key="timeline_subtitle">Основные проекты и достижения, реализованные в течение года</p>
+                </div>
+                
+                <div class="timeline-container-colored animate-on-scroll">
+                    <div class="timeline-line-wrapper">
+                        <div class="timeline-line">
+                            <div class="timeline-line-progress"></div>
+                            <div class="timeline-red-progress"></div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="timeline-item-colored timeline-item--left timeline-item--color1 animate-on-scroll" data-scroll-animation="slide-in-left">
+                        <div class="timeline-content-colored">
+                            <h3 data-lang-key="timeline_1_title">Открытие парка "Лошицкий Сад" (Минск)</h3>
+                            <span class="timeline-date" data-lang-key="timeline_1_date">Апрель 2025</span>
+                            <img src="img/park.webp" alt="Лошицкий парк Минск" class="zoomable-project-img">
+                            <p data-lang-key="timeline_1_desc">В 2025 году завершено благоустройство и открытие новой зоны отдыха с современными детскими и спортивными площадками, велодорожками и ландшафтным дизайном.</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="timeline-item-colored timeline-item--right timeline-item--color2 animate-on-scroll" data-scroll-animation="slide-in-right">
+                        <div class="timeline-content-colored">
+                            <h3 data-lang-key="timeline_2_title">Запуск электробусов (Гродно)</h3>
+                            <span class="timeline-date" data-lang-key="timeline_2_date">Май 2025</span>
+                            <img src="img/buss.webp" alt="Электробус в Гродно" class="zoomable-project-img">
+                            <p data-lang-key="timeline_2_desc">В Гродно введена в эксплуатацию новая линия электробусов, что позволило снизить уровень шума и выбросов в центре города.</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="timeline-item-colored timeline-item--left timeline-item--color3 animate-on-scroll" data-scroll-animation="slide-in-left">
+                        <div class="timeline-content-colored">
+                            <h3 data-lang-key="timeline_3_title">Реконструкция сквера им. 1000-летия Бреста</h3>
+                            <span class="timeline-date" data-lang-key="timeline_3_date">Июнь 2025</span>
+                            <img src="img/skver.webp" alt="Сквер 1000-летия Бреста" class="zoomable-project-img">
+                            <p data-lang-key="timeline_3_desc">В Бресте завершена реконструкция сквера: новые дорожки, освещение, зоны для отдыха и арт-объекты.</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="timeline-item-colored timeline-item--right timeline-item--color4 animate-on-scroll" data-scroll-animation="slide-in-right">
+                        <div class="timeline-content-colored">
+                            <h3 data-lang-key="timeline_4_title">Открытие новых станций метро (Минск, 3-я линия)</h3>
+                            <span class="timeline-date" data-lang-key="timeline_4_date">Сентябрь 2025</span>
+                            <img src="img/metro.webp" alt="Минское метро, 3-я линия" class="zoomable-project-img">
+                            <p data-lang-key="timeline_4_desc">В 2025 году в Минске планируется открытие новых станций третьей линии метро, включая станцию «Аэродромная».</p>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="timeline-item-colored timeline-item--left timeline-item--color5 animate-on-scroll" data-scroll-animation="slide-in-left">
+                        <div class="timeline-content-colored">
+                            <h3 data-lang-key="timeline_5_title">Модернизация набережной р. Сож (Гомель)</h3>
+                            <span class="timeline-date" data-lang-key="timeline_5_date">Октябрь 2025</span>
+                            <img src="img/river.webp" alt="Набережная Гомеля" class="zoomable-project-img">
+                            <p data-lang-key="timeline_5_desc">Завершение работ по модернизации центральной набережной: новые пешеходные зоны, велодорожки, смотровые площадки и зоны для пикников.</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="timeline-item-colored timeline-item--right timeline-item--color6 animate-on-scroll" data-scroll-animation="slide-in-right">
+                        <div class="timeline-content-colored">
+                            <h3 data-lang-key="timeline_6_title">Программа "Уютный двор" (Могилев)</h3>
+                            <span class="timeline-date" data-lang-key="timeline_6_date">Ноябрь 2025</span>
+                            <img src="img/dvor.webp" alt="Благоустроенный двор в Могилеве" class="zoomable-project-img">
+                            <p data-lang-key="timeline_6_desc">В рамках программы "Уютный двор" в Могилеве благоустроено более 50 дворовых территорий, установлены новые детские комплексы и спортивное оборудование.</p>
+                        </div>
+                    </div>
+
+                     
+                    <div class="timeline-item-colored timeline-item--left timeline-item--color1 animate-on-scroll" data-scroll-animation="slide-in-left">
+                        <div class="timeline-content-colored">
+                            <h3 data-lang-key="timeline_7_title">Ввод нового корпуса РНПЦ онкологии (Боровляны)</h3>
+                            <span class="timeline-date" data-lang-key="timeline_7_date">Декабрь 2025</span>
+                            <img src="img/hospital.webp" alt="Онкоцентр Боровляны" class="zoomable-project-img">
+                            <p data-lang-key="timeline_7_desc">В 2025 году завершится строительство и откроется новый корпус РНПЦ онкологии в Боровлянах — крупнейшего онкоцентра страны.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            
+            <div class="projects-list-styled animate-on-scroll is-visible">
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="ornament-bar"></div>
+            <p data-lang-key="footer_copyright">Беларусь 2025: Благоустройство.</p>
+            <p data-lang-key="footer_developed_by">Разработано с ❤️ для Беларуси</p>
+            <div class="ornament-bar"></div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/burger-menu.js"></script>
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/model-window.js"></script>
+    <script src="js/auth-simple.js"></script>
+    <div id="model-modal" class="model-modal" aria-modal="true" role="dialog" tabindex="-1" style="display:none;">
+      <div class="model-modal-content" role="document">
+        <button class="model-modal-close" id="close-model-modal" aria-label="Закрыть">&times;</button>
+        <h2 id="model-modal-title"></h2>
+        <div class="model-modal-date" id="model-modal-date"></div>
+        <div class="model-modal-desc" id="model-modal-desc"></div>
+        <div class="model-modal-photos" id="model-modal-photos"></div>
+      </div>
+    </div>
+</body>
+</html>
+
+

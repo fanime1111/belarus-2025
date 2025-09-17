@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="site_title_about">О программе - Беларусь 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/burger-menu.js"></script>
+
+    <link rel="icon" href="lwqeqfklednfcedj19ux6p06yfjjwktj-_1_.ico" type="image/x-icon">
+    <style>
+        /* Hero Section */
+        .about-hero {
+            background: linear-gradient(135deg, #006837 0%, #00A450 100%);
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+        }
+
+        .about-hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-hero h1 {
+            color: white;
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .about-hero-subtitle {
+            color: rgba(255,255,255,0.95);
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        /* Main Content */
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        /* Section Cards */
+        .about-card {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .about-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(180deg, #00A450 0%, #D92F21 100%);
+        }
+
+        .about-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .about-card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            gap: 1rem;
+        }
+
+        .about-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #00A450 0%, #006837 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .about-card h2 {
+            color: #006837;
+            font-size: 2rem;
+            font-weight: 800;
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .about-card-content p {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Feature List */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: 1rem;
+        }
+
+        .feature-item {
+            background: linear-gradient(135deg, #f8fffe 0%, #f0f9f0 100%);
+            padding: 1.2rem 1.5rem;
+            border-radius: 12px;
+            border-left: 3px solid #00A450;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* .feature-item::before {
+            content: '';
+            position: absolute;
+            left: 1rem;
+            color: #00A450;
+            font-weight: bold;
+            font-size: 1.2rem;
+        } */
+
+        .feature-item:hover {
+            background: linear-gradient(135deg, #f0f9f0 0%, #e8f5e8 100%);
+            transform: translateX(5px);
+            border-left-color: #D92F21;
+        }
+
+        .feature-item strong {
+            color: #006837;
+            display: inline-block;
+            margin-left: 1.5rem;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, #006837 0%, #00A450 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 4rem 0;
+            color: white;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            padding: 1rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        /* Tech Stack Grid */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .tech-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .tech-card:hover {
+            border-color: #00A450;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,164,80,0.1);
+        }
+
+        .tech-card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-card h3 {
+            color: #006837;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tech-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Dark Theme */
+        [data-theme="dark"] .about-card {
+            background: #2d2d2d;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        [data-theme="dark"] .about-card h2 {
+            color: #00A450;
+        }
+
+        [data-theme="dark"] .about-card-content p {
+            color: #e0e0e0;
+        }
+
+        [data-theme="dark"] .feature-item {
+            background: linear-gradient(135deg, rgba(0,164,80,0.1) 0%, rgba(0,164,80,0.05) 100%);
+            color: #e0e0e0;
+        }
+
+        [data-theme="dark"] .feature-item strong {
+            color: #00A450;
+        }
+
+        [data-theme="dark"] .tech-card {
+            background: #2d2d2d;
+            border-color: #444;
+        }
+
+        [data-theme="dark"] .tech-card h3 {
+            color: #00A450;
+        }
+
+        [data-theme="dark"] .tech-card p {
+            color: #b0b0b0;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .about-hero {
+                padding: 100px 0 60px;
+            }
+
+            .about-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .about-container {
+                padding: 40px 15px;
+            }
+
+            .about-card {
+                padding: 2rem 1.5rem;
+                margin-bottom: 2rem;
+            }
+
+            .about-card-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+
+            .about-card h2 {
+                font-size: 1.7rem;
+                text-align: center;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .feature-item {
+                padding: 1rem 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-hero h1 {
+                font-size: 2rem;
+            }
+
+            .about-hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .about-card {
+                padding: 1.5rem 1rem;
+            }
+
+            .about-card h2 {
+                font-size: 1.5rem;
+            }
+
+            .about-card-content p {
+                font-size: 1rem;
+            }
+
+            .stats-section {
+                padding: 2rem 1rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .stat-label {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header-full-nav  header-adaptive">
+        <div class="container">
+                        <div class="logo" data-lang-key="logo_text">Беларусь 2025: Благоустройство</div>
+            <label class="burger" for="burger">
+                <input type="checkbox" id="burger" />
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html" data-lang-key="nav_main">Главная</a></li>
+                    <li><a href="about.html" class="active" data-lang-key="nav_about">О программе</a></li>
+                    <li><a href="projects.html" data-lang-key="nav_projects">Проекты</a></li>
+                    <li><a href="news.html" data-lang-key="nav_news">Новости</a></li>
+                    <li><a href="gallery.html" data-lang-key="nav_gallery">Галерея</a></li>
+                    <li><a href="awards.html" data-lang-key="nav_awards">Достижения</a></li>
+                   <li><a href="liberation80.html" data-lang-key="nav_liberation80">80 лет победы</a></li>
+                </ul>
+                <div class="nav-auth-buttons">
+                    <button id="nav-login-btn" data-lang-key="login">Вход</button>
+                    <button id="nav-register-btn" data-lang-key="register">Регистрация</button>
+                </div>
+            </nav>
+            <div class="lang-switcher">
+                <button id="lang-ru" class="lang-btn active" data-lang="ru">RU</button>
+                <button id="lang-by" class="lang-btn" data-lang="by">BY</button>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">
+                    <span class="theme-toggle-slider"></span>
+                </button>
+                <button id="mobile-theme-btn" class="mobile-theme-btn" aria-label="Переключить тему">☀️</button>
+            </div>
+            <div class="auth-buttons">
+                <button id="login-btn">Вход</button>
+                <button id="register-btn">Регистрация</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="about-hero-content">
+                <h1 data-lang-key="about_main_title">О проекте "Беларусь 2025: Благоустройство"</h1>
+            </div>
+            
+        </section>
+
+        <!-- Main Content -->
+        <div class="about-container">
+            <!-- Project Info Card -->
+            <div class="about-card">
+                <div class="about-card-header">
+                    <div class="about-icon">📋</div>
+                    <h2 data-lang-key="about_project_info_title">Информация о проекте</h2>
+                </div>
+                <div class="about-card-content">
+                    <p data-lang-key="about_project_description">Проект "Беларусь 2025: Благоустройство" — это современная информационная платформа, созданная для освещения важнейших инициатив по развитию страны.</p>
+                </div>
+            </div>
+
+            <!-- Purpose Card -->
+            <div class="about-card">
+                <div class="about-card-header">
+                    <div class="about-icon">🎯</div>
+                    <h2 data-lang-key="about_purpose_title">Цель проекта</h2>
+                </div>
+                <div class="about-card-content">
+                    <p data-lang-key="about_purpose_description">Главная цель проекта — создать информационную платформу, которая будет освещать достижения Беларуси в области благоустройства и развития. Сайт предназначен для:</p>
+                    <ul class="feature-list">
+                        <li class="feature-item" data-lang-key="about_purpose_1">Информирования о текущих проектах и инициативах</li>
+                        <li class="feature-item" data-lang-key="about_purpose_2">Демонстрации успехов и достижений страны</li>
+                        <li class="feature-item" data-lang-key="about_purpose_5">Обеспечения удобного доступа к информации с любых устройств</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Features Card -->
+            <div class="about-card">
+                <div class="about-card-header">
+                    <div class="about-icon">⚡</div>
+                    <h2 data-lang-key="about_features_title">Особенности платформы</h2>
+                </div>
+                <div class="about-card-content">
+                    <p data-lang-key="about_features_description">Сайт разработан с учётом современных требований к веб-платформам:</p>
+                    <ul class="feature-list">
+                        <li class="feature-item" data-lang-key="about_feature_1"><strong>Простота и понятность</strong> — интуитивно понятный интерфейс</li>
+                        <li class="feature-item" data-lang-key="about_feature_2"><strong>Современный дизайн</strong> — актуальные тренды веб-дизайна</li>
+                        <li class="feature-item" data-lang-key="about_feature_3"><strong>Адаптивность</strong> — корректное отображение на всех устройствах</li>
+                        <li class="feature-item" data-lang-key="about_feature_4"><strong>Двуязычность</strong> — поддержка русского и белорусского языков</li>
+                        <li class="feature-item" data-lang-key="about_feature_5"><strong>Тёмная тема</strong> — возможность переключения между светлой и тёмной темами</li>
+                        <li class="feature-item" data-lang-key="about_feature_6"><strong>Интерактивность</strong> — динамические элементы без излишней сложности</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <!-- <div class="stats-section">
+                <h2 style="color: white; margin-bottom: 2rem;">Наши достижения</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">Разделов сайта</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Языка интерфейса</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Адаптивность</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Доступность</div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Sections Card -->
+            <div class="about-card">
+                <div class="about-card-header">
+                    <div class="about-icon">🌐</div>
+                    <h2 data-lang-key="about_sections_title">Разделы сайта</h2>
+                </div>
+                <div class="about-card-content">
+                    <p data-lang-key="about_sections_description">Платформа включает в себя несколько ключевых разделов:</p>
+                    <ul class="feature-list">
+                        <li class="feature-item" data-lang-key="about_section_main"><strong>Главная</strong> — обзор основных направлений и новостей</li>
+                        <li class="feature-item" data-lang-key="about_section_about"><strong>О программе</strong> — подробная информация о проекте</li>
+                        <li class="feature-item" data-lang-key="about_section_projects"><strong>Проекты</strong> — описание текущих и планируемых инициатив</li>
+                        <li class="feature-item" data-lang-key="about_section_news"><strong>Новости</strong> — актуальные события и обновления</li>
+                        <li class="feature-item" data-lang-key="about_section_gallery"><strong>Галерея</strong> — фотоотчёты и визуальные материалы</li>
+                        <li class="feature-item" data-lang-key="about_section_awards"><strong>Достижения</strong> — успехи и награды</li>
+                        <li class="feature-item" data-lang-key="about_section_liberation80"><strong>80 лет Победы</strong> — историческая память и памятные события освобождения Беларуси</li>
+                        <!-- <li class="feature-item" data-lang-key="about_section_infographics"><strong>Инфографика</strong> — данные в наглядном формате</li> -->
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Technology Card -->
+            <!-- <div class="about-card">
+                <div class="about-card-header">
+                    <div class="about-icon">💻</div>
+                    <h2 data-lang-key="about_technology_title">Технические особенности</h2>
+                </div>
+                <div class="about-card-content">
+                    <p data-lang-key="about_technology_description">Проект создан с использованием современных веб-технологий:</p>
+                    <div class="tech-grid">
+                        <div class="tech-card">
+                            <div class="tech-card-icon">🌐</div>
+                            <h3>HTML5 & CSS3</h3>
+                            <p>Современная семантическая разметка и стили</p>
+                        </div>
+                        <div class="tech-card">
+                            <div class="tech-card-icon">⚡</div>
+                            <h3>JavaScript</h3>
+                            <p>Интерактивность и динамические элементы</p>
+                        </div>
+                        <div class="tech-card">
+                            <div class="tech-card-icon">📱</div>
+                            <h3>Адаптивность</h3>
+                            <p>Корректное отображение на всех устройствах</p>
+                        </div>
+                        <div class="tech-card">
+                            <div class="tech-card-icon">🚀</div>
+                            <h3>Оптимизация</h3>
+                            <p>Быстрая загрузка и производительность</p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </main>
+<footer>
+        <div class="container">
+            <div class="ornament-bar"></div>
+            <p data-lang-key="footer_copyright">Беларусь 2025: Благоустройство.</p>
+            <p data-lang-key="footer_developed_by">Разработано с ❤️ для Беларуси</p>
+            <div class="ornament-bar"></div>
+        </div>
+ </footer>
+ <script src="script.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/burger-menu.js"></script>
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/lang-switcher-about.js"></script>
+</body>
+</html>
+
