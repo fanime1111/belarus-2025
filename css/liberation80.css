@@ -1,0 +1,10 @@
+﻿
+[data-theme="dark"] .liberation-page header nav ul li a {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .liberation-page .logo {
+    color: var(--primary-red);
+}
+
+

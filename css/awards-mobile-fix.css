@@ -1,0 +1,111 @@
+
+@media (max-width: 768px) {
+    .award-section.creative {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        gap: 1rem;
+    }
+    
+    .award-section.creative .award-icon {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        display: block;
+        text-align: center;
+    }
+    
+    .award-section.creative .award-img-wrap {
+        width: 100%;
+        margin: 0 0 1rem 0;
+        float: none;
+        display: block;
+    }
+    
+    .award-section.creative .award-img {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+        object-fit: cover;
+        margin: 0 auto;
+        display: block;
+        border-radius: 12px;
+    }
+    
+    .award-section.creative h3 {
+        font-size: 1.1rem;
+        margin: 0.5rem 0;
+        text-align: center;
+        clear: both;
+        width: 100%;
+    }
+    
+    .award-section.creative p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        text-align: center;
+        margin: 0.5rem 0;
+        clear: both;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .award-section.creative {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+    
+    .award-section.creative .award-icon {
+        font-size: 2rem;
+    }
+    
+    .award-section.creative .award-img {
+        max-height: 150px;
+    }
+    
+    .award-section.creative h3 {
+        font-size: 1rem;
+        margin: 0.4rem 0;
+    }
+    
+    .award-section.creative p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .award-section.creative {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1.5rem;
+        padding: 2rem;
+    }
+    
+    .award-section.creative .award-img-wrap {
+        flex: 0 0 200px;
+        margin-right: 1.5rem;
+        float: none;
+    }
+    
+    .award-section.creative .award-img {
+        width: 100%;
+        height: auto;
+        max-height: 150px;
+        object-fit: cover;
+    }
+    
+    .award-section.creative h3 {
+        font-size: 1.2rem;
+        text-align: left;
+        margin-bottom: 0.5rem;
+    }
+    
+    .award-section.creative p {
+        font-size: 0.95rem;
+        text-align: left;
+    }
+}
