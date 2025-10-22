@@ -1030,10 +1030,10 @@
 [data-theme="dark"] .news-preview p {
     color: var(--text-secondary);
 }
-[data-theme="dark"] .news-preview img {
+/* [data-theme="dark"] .news-preview img {
     border: 8px solid var(--bg-secondary);
     box-shadow: 0 5px 15px rgba(217,47,33,0.4);
-}
+} */
 [data-theme="dark"] .btn-news:hover {
     background: transparent;
     color: var(--primary-red);
