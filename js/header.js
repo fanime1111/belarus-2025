@@ -69,6 +69,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
             
             document.documentElement.setAttribute('data-theme', newTheme);
+            
+            // Добавляем/удаляем класс dark-theme для body
+            if (newTheme === 'dark') {
+                document.body.classList.add('dark-theme');
+            } else {
+                document.body.classList.remove('dark-theme');
+            }
+            
             localStorage.setItem('theme', newTheme);
             
             this.textContent = newTheme === 'dark' ? '🌙' : '☀️';
@@ -76,6 +84,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const savedTheme = localStorage.getItem('theme') || 'light';
         document.documentElement.setAttribute('data-theme', savedTheme);
+        
+        // Устанавливаем класс при загрузке
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+        }
+        
         mobileThemeBtn.textContent = savedTheme === 'dark' ? '🌙' : '☀️';
     }
 });
