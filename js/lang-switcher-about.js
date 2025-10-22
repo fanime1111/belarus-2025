@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Header
             'logo_text': 'Беларусь 2025',
             'nav_main': 'Главная',
-            'nav_about': 'О программе',
+            'nav_about': 'О сайте',
             'nav_projects': 'Проекты',
             'nav_news': 'Новости',
             'nav_gallery': 'Галерея',
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Header
             'logo_text': 'Беларусь 2025',
             'nav_main': 'Галоўная',
-            'nav_about': 'Пра праграму',
+            'nav_about': 'Аб сайце',
             'nav_projects': 'Праекты',
             'nav_news': 'Навіны',
             'nav_gallery': 'Галерэя',
