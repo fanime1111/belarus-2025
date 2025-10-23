@@ -290,6 +290,7 @@ function showImageModal(src, alt) {
         }
         
         .modal-image {
+            margin: 0 auto;
             max-width: 100%;
             max-height: 80vh;
             border-radius: 10px;
