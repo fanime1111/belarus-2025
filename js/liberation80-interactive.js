@@ -1,4 +1,4 @@
-﻿
+
 
 document.addEventListener('DOMContentLoaded', function() {
     initTimeline();
@@ -250,12 +250,11 @@ function showImageModal(src, alt) {
     const modal = document.createElement('div');
     modal.className = 'image-modal';
     modal.innerHTML = `
-        <div class="modal-overlay">
-            <div class="modal-content">
-                <button class="modal-close">&times;</button>
-                <img src="${src}" alt="${alt}" class="modal-image">
-                <div class="modal-caption">${alt}</div>
-            </div>
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <img src="${src}" alt="${alt}" class="modal-image">
+            <div class="modal-caption">${alt}</div>
         </div>
     `;
     const modalStyles = `
@@ -284,23 +283,34 @@ function showImageModal(src, alt) {
         
         .modal-content {
             position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             max-width: 90vw;
             max-height: 90vh;
             text-align: center;
+            z-index: 1001;
         }
         
         .modal-image {
-            margin: 0 auto;
-            max-width: 100%;
-            max-height: 80vh;
+            display: block;
+            max-width: 90vw;
+            max-height: 85vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
             border-radius: 10px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
         }
         
         .modal-caption {
             color: white;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
             font-size: 1.1rem;
+            max-width: 90vw;
+            padding: 0 20px;
+            text-align: center;
         }
         
         .modal-close {
